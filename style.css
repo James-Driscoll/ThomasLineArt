@@ -1,0 +1,783 @@
+/*
+Theme Name: 	James Driscoll
+Theme URI: 		http://www.james-driscoll.co.uk
+Description: 	James Driscoll Wordpress Integrated Site
+Version: 		1.0
+Author: 		James Driscoll
+Author URI: 	http://www.james-driscoll.co.uk
+Tags:
+*/
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   $ Site Items
+   ========================================================================== */
+body {
+    background: #FFF url("images/background-line-header.png") repeat-x;  
+}
+
+/* --Container Items-------------------------------------------------------- */
+.container {
+    width: 940px; /* Padding has already been used */
+    margin: 0px auto;
+}
+
+/* --Sub Container Full Items----------------------------------------------- */
+.sub-container-full {
+    clear: both;
+    padding-top: 50px; 
+    font-family: "Lato" "Trebuchet MS";
+    color: #646472;
+}
+.sub-container-full .section-title-full {
+    height: 70px;
+    position: relative;
+}
+
+/* --Sub Container Half Items------------------------------------------------ */
+.sub-container-half {
+    width: 430px;
+    font-family: "Lato" "Trebuchet MS";
+    color: #646472;
+}
+.sub-container-half .section-title-half {
+    width: 430px;
+    height: 70px;
+    position: relative;
+}
+.sub-container-half .section-title-half h2 {
+    color: #646472;
+    display: inline;
+}
+
+/* --Content Items---------------------------------------------------------- */
+.content {
+    clear: both;
+    font-family: "Lato" "Trebuchet MS";
+}
+
+/* ==========================================================================
+   $ Header Items
+   ========================================================================== */
+.header {
+    height: 320px;
+    margin-top: 100px;
+    color: #545454;
+    font-family: "Lato", "Trebuchet MS";
+}
+.header .title {
+    font-size: 40px;
+    margin-bottom: 13px;
+}
+.header a {
+    color: #545454;
+    text-decoration: none;
+}
+.header .title:hover {
+    opacity: 0.8;
+}
+
+/* --Intro Items------------------------------------------------------------- */
+.header .intro {
+    float: left;
+    border-right: 1px solid #CACAD9;
+    padding-right: 65px;
+    width: 500px;
+}
+.header .intro img {
+    float: left;
+    margin-top: 5px;
+    border-radius: 11px;
+    margin-right: 20px;
+}
+.header .intro .intro-details {
+    display: inline;
+}
+.header .intro .intro-details .intro-sub-title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #777;
+}
+.header .intro .intro-details .intro-text {
+    display: block;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.header .intro .intro-details .intro-sub-name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 19px;
+    font-family: "Shadows Into Light Two", Georgia;
+}
+
+/* --Contact Items---------------------------------------------------------- */
+.header .contact {
+    float: right;
+}
+.header .contact ul {
+    list-style: none;
+    margin-top: 10px;
+}
+.header .contact ul li {
+    margin-bottom: 38px;
+    width: 310px;
+}
+.header .contact a {
+    color: #669D2C;
+    font-size: 14px;
+    text-decoration: none;
+}
+.header .contact .email {
+    background: url("images/icon-email.png") no-repeat 100% 50%;
+}
+.header .contact .linked {
+    background: url("images/icon-linked.png") no-repeat 100% 50%;
+}
+.header .contact .web {
+    background: url("images/icon-web.png") no-repeat 100% 50%;
+}
+.header .contact a:hover {
+    text-decoration: underline;
+    color: #328127;
+}
+
+/* ==========================================================================
+   Main Content Items
+   ========================================================================== */
+/* --Box Items--------------------------------------------------------------- */
+.box {
+    width: 210px;
+    height: 38px;
+    background-color: #DBDEE3;
+    color: #646472;
+    font-family: "Lato" "Trebuchet MS";
+    font-size: 14px;  
+    text-align: center;
+    line-height: 37px;  
+}
+
+/* --Bullet Points Items---------------------------------------------------- */
+.bullet-points li {
+    padding: 15px;
+    margin-left: 20px;
+}
+
+/* --Title Bar Items-------------------------------------------------------- */
+.title-bar {
+    display: inline;
+    position: absolute;
+    top: 15px;
+    height: 5px;
+    border-top: 1px solid #CACAD9;
+    border-bottom: 1px solid #CACAD9;
+}
+
+/* --Skills Items------------------------------------------------------------ */
+.skills {
+    float: left;
+}
+.skills .title-skills {
+    width: 346px;
+    left: 84px;
+}
+.skills .skill-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+.skills .skill-list .whole-bar {
+    height: 37px;
+    width: 100%;
+    background-color: #DBDEE3;
+    margin-bottom: 37px;
+}
+.skills .skill-list .bar {
+    height: 37px;
+    float: left;
+    font-family: "Lato" "Trebuchet MS" "Arial";
+    font-size: 14px;
+    color: #FFF;
+    font-weight: normal;
+    margin: 0px;
+    line-height: 38px;
+    padding-left: 10px;
+}
+.skills .skill-list .grey {
+    background-color: #637076;
+    height: 37px;
+    width: 324px;
+}
+.skill-list .green {
+    background-color: #669D2C;
+    height: 37px;
+    width: 324px;
+}
+.skills .skill-list .skill-pm {
+    width: 70%
+}
+.skills .skill-list .skill-html {
+    width: 60%;
+}
+.skills .skill-list .skill-css {
+    width: 55%;
+}
+.skills .skill-list .skill-require {
+    width: 65%;
+}
+.skills .skill-list .skill-sql {
+    width: 50%;
+}
+.skills .skill-list .skill-php {
+    width: 35%;
+}
+.skills .skill-list .skill-net {
+    width: 50%;
+}
+.skills .skill-list .skill-email {
+    width: 60%;
+}
+.skills .skill-list .skill-oo {
+    width: 55%;
+}
+.skills .skill-list .skill-office {
+    width: 65%;
+}
+
+/* --Education Items--------------------------------------------------------- */
+.education {
+    float: right;
+}
+.education .title-education {
+    width: 288px;
+    left: 142px;
+}
+.education .edu-logo {
+    float: left;
+}
+.education .edu-logo:hover {
+    opacity: 0.8;
+}
+.education .level {
+    display: block;
+    clear: both;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.education .course {
+    clear: both;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 0px;  
+    margin-bottom: 8px;  
+}
+.education .course span {
+    font-size: 18px;
+}
+.education .modules {
+    list-style: none;
+    font-size: 13px;
+    margin-top: 0px;
+    padding-left: 20px;
+}
+.education .sixth {
+    margin-top: 35px;
+}
+.education .secondary {
+    margin-top: 35px;
+}
+.education .date {
+    float: right;
+}
+
+/* --Work Experience Items--------------------------------------------------- */
+.work .title-work {
+    width: 76%;
+    left: 225px;
+}
+.work .company {
+    clear: both;
+    margin-bottom: 60px;
+}
+.work .work-logo {
+    float: left;
+}
+.work .work-logo:hover {
+    opacity: 0.8;
+}
+.work .role-date {
+    float: right;
+    width: 570px;
+}
+.work .role-date .role {
+    float: left;
+    background-color: #669D2C;
+    color: #FFF;
+    font-family: "Lato" "Trebuchet MS";
+    font-size: 14px;  
+    text-align: center;
+    line-height: 37px; 
+    margin: 0px;
+    font-weight: normal;
+}    
+.work .role-date .date {
+    float: right;
+}
+.work .description {
+    clear: both;
+    padding-top: 10px;
+}
+
+/* --Achievements & Interests Items------------------------------------------ */
+.achievements {
+    float: left;
+}
+.achievements .title-achievements {
+    width: 244px;
+    left: 186px;
+}
+.bullet-points li {
+    list-style: none;
+}
+.bullet-points .cisco {
+    background: url("images/icon-cisco.png") no-repeat 90% 50%;
+}
+.bullet-points .office {
+    background: url("images/icon-office.png") no-repeat 87% 50%;
+}
+.bullet-points .dofe {
+    background: url("images/icon-dofe.png") no-repeat 88% 50%;
+}
+.bullet-points .guitar {
+    background: url("images/icon-guitar.png") no-repeat 87% 50%;
+}
+.bullet-points .drive {
+    background: url("images/icon-drive.png") no-repeat 87% 50%;
+}
+.bullet-points .squash {
+    background: url("images/icon-squash.png") no-repeat 87% 50%;
+}
+.bullet-points .gym {
+    background: url("images/icon-gym.png") no-repeat 87% 50%;
+}
+.bullet-points .tech {
+    background: url("images/icon-tech.png") no-repeat 87% 50%;
+}
+.interests {
+    float: right;
+}
+.interests .title-interests {
+    width: 302px;
+    left: 128px;
+}
+
+/* ==========================================================================
+   Footer Items
+   ========================================================================== */
+.footer {
+    clear: both;
+    height: 110px;
+    background: #FFF url("images/background-line-footer.png") repeat-x;
+    position: relative;
+}
+.footer a {
+    color: #669D2C;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Lato", "Trebuchet MS";
+}
+.footer .email {
+    position: absolute;
+    top: 40px;
+}
+.footer a:hover {
+    text-decoration: underline;
+    color: #328127;
+}
+
+/* ==========================================================================
+   Responsive Styling (breakpoint: 500px)
+   ========================================================================== */
+@media (max-width: 500px){
+    .body {
+        background: #FFF url("images/background-line-header-2.png") repeat-x;  
+    }
+
+/* --Container Items---------------------------- */
+    .container {
+        width: 100%;
+    }
+
+/* --Sub Container Full Items------------------- */
+    .sub-container-full {
+        width: 100%;
+    }
+    .section-title-full {
+        width: 100%;
+    }
+
+/* --Sub Container Half Items------------------- */
+    .sub-container-half {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+/* --Intro Items-------------------------------- */
+    .header .intro {
+        border: none;
+        width: 100%;
+        padding-right: 0px;
+    }
+    .header .intro img {
+        margin-right: 15px;
+    }
+    .header .intro .intro-details {
+        display: inline;
+        margin-left: 0px;
+    }
+    .header .intro .intro-details .intro-text {
+        width: 100%;
+        display: block;
+        padding-left: 10px;
+    }
+
+/* --Contact Items----------------------------- */
+    .header .contact {
+        float: left;
+    }
+    .header .contact ul li {
+        margin-bottom: 5px;
+    }
+
+/* --Skills Items------------------------------ */
+    .skills .skill-list {
+        width: 100%;
+    }
+    .skills .skill-list .whole-bar {
+        margin-bottom: 5px;
+    }
+    .skills .section-title-half {
+        width: 100%;
+    }
+    .skills .title-skills{
+        width: 100%;
+    }
+
+
+/* --Work Experience Items-------------------- */
+    .work .title-work {
+        width: 53%;
+    }
+    .work .role-date {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .work .role-date .role {
+        float: left;
+    }
+    .work .role-date .date {
+        float: right;
+    }
+
+/* --Achievements & Interests Items----------- */
+    .achievements {
+        float: left;
+    }
+    .interests {
+        float: left;
+        clear: both;
+    }
+    .bullet-points {
+        padding: 0px;
+    }
+    .bullet-points li {
+        padding: 10px;
+    }
+    .interests .section-title-half {
+        height: 20px;
+    }
+    .achievements .section-title-half {
+        height: 20px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

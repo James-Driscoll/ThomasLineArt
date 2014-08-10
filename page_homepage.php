@@ -71,6 +71,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
         <li class="about"><a href="#">About</a></li>
     </ul>
 
+    <a class="home-logo" href="<?php echo get_site_url(); ?>">
+        <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">
+    </a>
+
 </div>
 <!-- Content ends here -->
 

@@ -9,178 +9,69 @@
  * Please see /external/starkers-utilities.php for info on get_template_parts()
  */
 
-//Get the header(s)
-get_template_parts( array( 'parts/html-header', 'parts/header' ) );
-
 if ( have_posts() ) while ( have_posts() ) : the_post();
  ?>
 
+<!DOCTYPE HTML>
+<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+            
+        <!-- Load up Google Fonts FAST -->
+        <link href='http://fonts.googleapis.com/css?family=Neuton:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+        
+        <title><?php wp_title( '|' ); ?></title>
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3"/>
+        <!--<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/normalize.css?v=3"/>-->
+
+        <meta name="viewport" content="width=device-width">
+
+        <!-- DNS Prefetch -->
+        <link rel="dns-prefetch" href="<?php echo get_bloginfo("url"); ?>" />
+        <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+        <link rel="dns-prefetch" href="//maps.google.com" />
+
+        <!-- IE Stuff -->
+        <meta http-equiv="imagetoolbar" content="false" />
+
+        <!-- JQuery -->
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.7.1.min.js" ></script>
+
+        <!-- BxSlider -->
+        <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
+
+        <!-- Site Javascript -->
+        <script src="<?php echo get_stylesheet_directory_uri();?>/js/site.js"></script>
+
+
+
+<?php wp_head(); ?>
+
+        <script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
+        </head>
+        <body <?php body_class(); ?>>
+
 
 <!-- Content Begins Here -->
-<div class="container content">
+<div class="top-navigation">
 
-    <!-- Skills sub-section begins here -->
-    <div class="sub-container-half skills">
-        <div class="section-title-half">
-            <h2>Skills</h2>
-            <div class="title-bar title-skills"></div>
-        </div>
-            <ul class="skill-list">
-                <li class="whole-bar"><h3 class="bar grey skill-pm">Project Management</h3></li>
-                <li class="whole-bar"><h3 class="bar green skill-html">HTML</h3></li>
-                <li class="whole-bar"><h3 class="bar grey skill-css">CSS</h3></li>
-                <li class="whole-bar"><h3 class="bar green skill-require">Requirements Engineering</h3></li>
-                <li class="whole-bar"><h3 class="bar grey skill-sql">SQL</h3></li>
-                <li class="whole-bar"><h3 class="bar green skill-php">PHP</h3></li>
-                <li class="whole-bar"><h3 class="bar grey skill-net">Networking</h3></li>
-                <li class="whole-bar"><h3 class="bar green skill-email">Email Marketing</h3></li>
-                <li class="whole-bar"><h3 class="bar grey skill-oo">Object Oriented</h3></li>
-                <li class="whole-bar"><h3 class="bar green skill-office">Office</h3></li>
-            </ul>
-    </div>
-    <!-- Skills sub-section ends here -->
-
-    <!-- Education sub-section begins here -->
-    <div class="sub-container-half education" id="education">
-        <div class="section-title-half">
-            <h2>Education</h2>
-            <div class="title-bar title-education"></div>
-        </div>
-        
-        <!-- Degree details section begins here -->
-        <div class="uni">
-            <a class="edu-logo" href="http://www.shu.ac.uk/" target="_blank">
-                <img class="edu-logo" height="59" width="110" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-shu.png" alt="Sheffield Hallam University logo">
-            </a>
-            <div class="date box">SEP 2011 - PRESENT</div>
-            <strong class="level">Degree</strong>
-            <h3 class="course"><span>BSc Computing - 3rd Year (placement)</span></h3>
-            <span class="course-year">2nd Year Modules: <strong>76%</strong></span>
-            <ul class="modules">
-                <li>Object Oriented Analysis, Design & Implementation - <strong>95%</strong></li>
-                <li>Cisco CCNA Network Fundamentals - <strong>78%</strong></li>
-                <li>Web Architectures - <strong>78%</strong></li>
-                <li>Database Systems - <strong>69%</strong></li>
-                <li>E-Business - <strong>69%</strong></li>
-                <li>Project Management & Career Development - <strong>68%</strong></li>
-            </ul>
-            <span class="course-year">1st Year Modules: <strong>76%</strong></span>
-            <ul class="modules">
-                <li>Programming for Computing - <strong>90%</strong></li>
-                <li>Cisco Technology Essentials - <strong>83%</strong></li>
-                <li>Mathematics for Computing - <strong>81%</strong></li>
-                <li>Information Systems - <strong>70%</strong></li>
-                <li>Web Design & Development  - <strong>68%</strong></li>
-                <li>Professionalism & Communication Skills - <strong>64%</strong></li>
-            </ul>
-        </div>
-        <!-- Degree details section ends here -->
-
-        <!-- A-levels details section begins here -->
-        <div class="sixth">
-            <a class="edu-logo" href="http://www.ccs.northants.sch.uk/" target="_blank">
-                <img height="67" width="126" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-ccs.png" alt="Caroline Chisholm School logo">   
-            </a>
-            <div class="date box">SEP 2009 - JUL 2011</div>
-            <strong class="level">A Level</strong>
-            <ul class="modules">
-                <li>Mathematics</li>
-                <li>Computing</li>
-                <li>Business Studies</li>
-            </ul>
-        </div>
-        <!-- A-levels details section ends here -->
-
-        <!-- GCSE details section begins here -->
-        <div class="secondary">
-            <a class="edu-logo" href="http://www.sponne.org.uk/" target="_blank">
-                <img height="49" width="160" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-sponne.png" alt="Caroline Chisholm School logo">
-            </a>  
-            <div class="date box">SEP 2005 - JUL 2009</div>
-            <strong class="level">GCSE</strong>
-            <ul class="modules">
-                <li>12 x <strong>A* - C</strong> GCSE’s awarded including Mathematics and English.</li>
-            </ul>
-        </div>
-        <!-- GCSE details section ends here -->
-
-    </div>
-    <!-- Education sub-section ends here -->
-
-    <!-- Work Experience sub-section begins here -->
-    <div class="sub-container-full work">
-        <div class="section-title-full">
-            <h2>Work Experience</h2>
-            <div class="title-bar title-work"></div>
-        </div>
-            <div class="company">
-                <a class="work-logo" href="http://www.teradata.co.uk/" target="_blank">
-                    <img height="42" width="175" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-teradata.png">
-                </a>
-                <div class="role-date">
-                    <h3 class="role box">Project Management Assistant</h3>
-                    <div class="date box">JUL 2013 - PRESENT</div>
-                </div>
-                <div class="description">
-                    <p>I am currently working for Teradata Applicatons as a Project Management Assistant. I am working as placement student as part of a 12 month internship. The placement has taught me vital project management skills and also allowed me incredible exposure to the digital marketing industry. I have learnt first hand the importance of:</p>
-                    <ul class="desc-list">
-                        <li>Accurate project scoping</li>
-                        <li>Strong client relationships and interation</li>
-                        <li>Expectation management</li>
-                        <li>Resource management</li>
-                    </ul>
-                    <p>The role has been particularly beneficial in enhancing my knowledge of how tasks move around the various departments of a business, and how project managerial styles such as PRINCE2 and AGILE can offer both advantages and disadvantages to different kinds of projects.</p>
-                </div>
-            </div>
-            <div class="company">
-                <a class="work-logo" href="http://www.northamptongeneral.nhs.uk/" target="_blank">
-                    <img height="70" width="175" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-nhs.png">
-                </a>
-                <div class="role-date">
-                    <h3 class="role box">Ward Host</h3>
-                    <div class="date box">JAN 2010 - PRESENT</div>
-                </div>
-                <div class="description">
-                    <p>I worked at Northampton General Hospital part time for three years. Each shift I was responsible for managing a ward’s food and beverages. The role required to communicate with patients to offer different foods and work out what variety of meals a patient would like to eat, as well as at the same time taking into account special dietary requirements of the individual.</p>
-                    <p>During my time at NGH, the Trust has offered training opportunities to me in order to increase my working performance and knowledge. I have completed training courses in Conflict Resolution, Infection Control and Ethnicity & Diversity.</p>
-                </div>
-            </div>
-    </div>
-    <!-- Work Experience sub-section ends here -->
-
-    <!-- Achievements sub-section begins here -->
-    <div class="sub-container-half achievements">
-        <div class="section-title-half">
-            <h2>Achievements</h2>
-            <div class="title-bar title-achievements"></div>
-        </div>
-        <ul class="bullet-points">
-            <li class="cisco">Cisco Accreditation</li>
-            <li class="office">Microsoft Certification</li>
-            <li class="dofe">Duke of Edinburgh's Award</li>
-            <li class="guitar">Guitar</li>
-            <li class="drive">4 years driving - no points</li>
-        </ul>
-    </div>
-    <!-- Achievements sub-section ends here -->
-
-    <!-- Interests sub-section begins here -->
-    <div class="sub-container-half interests">
-        <div class="section-title-half">
-            <h2>Interests</h2>
-            <div class="title-bar title-interests"></div>
-        </div>
-        <ul class="bullet-points">
-            <li class="squash">Squash</li>
-            <li class="gym">Regular member of gym</li>
-            <li class="tech">Technology</li>
-        </ul>
-    </div>
-    <!-- Interests sub-section ends here -->
+    <ul class="menu">
+        <li class="home"><a href="#">Home</a></li>
+        <li class="studio"><a href="#">Studio &amp; Resarch</a></li>
+        <li class="works"><a href="#">Works</a></li>
+        <li class="about"><a href="#">About</a></li>
+    </ul>
 
 </div>
 <!-- Content ends here -->
 
 <?php  endwhile;
- //Get the footer(s)
-get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>

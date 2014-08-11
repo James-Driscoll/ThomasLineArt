@@ -40,27 +40,23 @@
 
 
 
-<?php wp_head(); ?>
+		<?php wp_head(); ?>
 
-                <script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
-        </head>
-        <body <?php body_class(); ?>>
+    	<script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
+        
+    </head>
 
-	        <div class="container header">
-	            <h1 class="title"><a href="http://james-driscoll.co.uk">James Driscoll</a></h1>
-	            <div class="intro">
-	                <img height="150" width="152" src="<?php echo get_stylesheet_directory_uri() ?>/images/portrait.jpg" alt="Portrait Image">
-	                <div class="intro-details">
-	                    <strong class="intro-sub-title">BSc Computing Student</strong>
-	                    <span class="intro-text">I am a dedicated individual with a strong interest in modern technology and how it can be applied and uitilised in business.</span>
-	                    <h4 class="intro-sub-name">James Driscoll</h4>
-	                </div>
-	            </div>
-	            <div class="contact">
-	                <ul>
-	                    <li class="email"><a href="mailto:enquiries@james-driscoll.co.uk">enquiries@james-driscoll.co.uk</a></li>
-	                    <li class="linked"><a href="http://uk.linkedin.com/pub/james-driscoll/5a/19/40b/" target="_blank">my LinkedIn</a></li>
-	                    <li class="web"><a href="http://webdevelopment.james-driscoll.co.uk" target="_blank">webdevelopment.james-driscoll.co.uk</a></li>
-	                </ul>
-	            </div>
-	        </div>
+    <body <?php body_class(); ?>>
+
+        <div class="container header">
+            <h1 class="title"><a href="http://art.thomasline.uk">Thomas Line</a></h1>
+        </div>
+
+		<?php
+			//Output the navigation
+		  	$args = array(
+			  "theme_location" => "top_navigation",
+			  'container_class' => 'top-navigation container'
+			);
+			wp_nav_menu($args);
+		?>

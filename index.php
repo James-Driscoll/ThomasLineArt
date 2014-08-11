@@ -15,7 +15,7 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
     <div class="content">
         <div class="container blog-page">
-            <h1 class="blog-heading">My Blog Posts</h1>
+            <h1 class="blog-heading">=================</h1>
 
             <?php if (have_posts()) ?>
             <?php while (have_posts()) : the_post(); ?>

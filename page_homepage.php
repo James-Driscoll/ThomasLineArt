@@ -62,16 +62,16 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
 
 <!-- Content Begins Here -->
-<div class="top-navigation">
+<?php
+        //Output the navigation
+      
+      $args = array(
+        "theme_location" => "top_navigation",
+        'container_class' => 'top-navigation container'
+        );
+      wp_nav_menu($args);
+      ?>
 
-    <ul class="menu">
-        <li class="home"><a href="#">Home</a></li>
-        <li class="studio"><a href="#">Studio &amp; Resarch</a></li>
-        <li class="works"><a href="#">Works</a></li>
-        <li class="about"><a href="#">About</a></li>
-    </ul>
-
-</div>
 
 <a class="home-logo" href="<?php echo get_site_url(); ?>">
      <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">

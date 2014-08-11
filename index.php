@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog
+ * Template Name: Studio & Research
  *
  * @package     WordPress
  * @subpackage  Starkers
@@ -14,13 +14,11 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
 
     <div class="content">
-        <div class="container blog-page">
-            <h1 class="blog-heading">=================</h1>
-
+        <div class="container">
+            
             <?php if (have_posts()) ?>
             <?php while (have_posts()) : the_post(); ?>
             
-
             <?php 
             $meta = rwmb_meta("pimages");
             $image = array("none.jpg");
@@ -28,8 +26,7 @@ get_template_parts( array( 'parts/html-header') ); ?>
                 $image = wp_get_attachment_image_src($meta,"post-thumb");
             }?>
                     
-        <div class="prod-image">
-
+        <div class="studio-image">
           <?php
             if ($image) { ?>
                 <img src="<?php echo $image[0]; ?>"> 

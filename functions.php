@@ -96,9 +96,6 @@ register_nav_menus(
     );
 
 
-
-
-
 /* -------------------------------------------------------
     Custom Post Types
 ------------------------------------------------------- */
@@ -112,19 +109,19 @@ function create_post_types() {
         Client Post Type
     --------------------------*/
      $labels = array(
-        'name' => 'Products',
-        'singular_name' => 'Product',
-        'add_new' => 'New Product',
-        'add_new_item' => 'Add New Product',
-        'edit_item' => 'Edit Product',
-        'new_item' => 'New Product',
-        'all_items' => 'All Products',
-        'view_item' => 'View Product',
-        'search_items' => 'Search Products',
-        'not_found' =>  'No Products found',
-        'not_found_in_trash' => 'No Products found in trash',
+        'name' => 'Studios & Research',
+        'singular_name' => 'Studio & Research',
+        'add_new' => 'New Studio & Research',
+        'add_new_item' => 'Add New Studio & Research',
+        'edit_item' => 'Edit Studio & Research',
+        'new_item' => 'New Studio & Research',
+        'all_items' => 'All Studios & Research',
+        'view_item' => 'View Studio & Research',
+        'search_items' => 'Search Studios & Research',
+        'not_found' =>  'No tudios & Research found',
+        'not_found_in_trash' => 'No Studios & Research found in trash',
         'parent_item_colon' => '',
-        'menu_name' => 'Products'
+        'menu_name' => 'Studios & Research'
       );
       $args = array(
         'labels' => $labels,
@@ -133,19 +130,18 @@ function create_post_types() {
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'product'),
+        'rewrite' => array( 'slug' => 'studio'),
         'capability_type' => 'post',
         'has_archive' => true,
         'show_in_admin_bar' => true,
         'hierarchical' => false,
-        'menu_position' => null,
+        'menu_position' => 4,
         'supports' => array( 'title'),
-        'menu_icon' => get_stylesheet_directory_uri()."/images/admin/product.png",
+        'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
       );
       register_post_type('product', $args);
 
 }
-
 
 
 /* --------------------------------------------------

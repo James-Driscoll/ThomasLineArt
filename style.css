@@ -106,63 +106,63 @@ textarea {
    ========================================================================== */
 body {
     background: #F7E1EC;
-    width: 960px;
-    padding: 100px 0;
-    margin: 0 auto;  
+    width: 100%; 
 }
 
 /* --Container Items-------------------------------------------------------- */
 .container {
-    width: 940px; /* Padding has already been used */
-    margin: 0px auto;
+    margin: 0px 30px;
 }
 
-/* --Top Navigation Items---------------------------------------------------- */
-.top-navigation .menu {
-    border-width: 1px 0px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+/* --Header Items----------------------------------------------------------- */
+.header .title a {
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
 }
-.top-navigation .menu li {
+.header .title a:hover {
+    opacity: 0.6;
+}
+
+/* --Top Navigation Items--------------------------------------------------- */
+.top-navigation li {
     display: inline;
-    padding: 70px;
+    padding: 10px;
 }
-.top-navigation .menu li a {
+.top-navigation li a {
     display: inline-block;
-    padding: 5px;
     text-decoration: none;
     font-family: Arial;
     font-size: 15px;
 }
-.top-navigation .menu .home a {
-    color: grey;
+.top-navigation .home a {
+    color: orange;
 }
-.top-navigation .menu .home a:hover {
+.top-navigation .home a:hover {
     color: black;
 }
-.top-navigation .menu .studio a {
-    color: grey;
+.top-navigation .studio a {
+    color: blue;
 }
-.top-navigation .menu .studio a:hover {
+.top-navigation .studio a:hover {
     color: black;
 }
-.top-navigation .menu .works a { 
-    color: grey;
+.top-navigation .works a { 
+    color: green;
 }
-.top-navigation .menu .works a:hover {
+.top-navigation .works a:hover {
     color: black;
 }
-.top-navigation .menu .about a {
-    color: grey;
+.top-navigation .about a {
+    color: red;
 }
-.top-navigation .menu .about a:hover {
+.top-navigation .about a:hover {
     color: black;
 }
 
-
-/* --Home Logo Items--------------------------------------------------------- */
+/* --Home Page Logo Items---------------------------------------------------- */
 .home-logo img {
     display: block;
     margin-left: auto;

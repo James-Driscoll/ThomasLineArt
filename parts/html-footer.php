@@ -1,7 +1,7 @@
 <!-- Footer begins here -->
 <div class="footer">
     <div class="container">
-        <a class="email" href="mailto:enquiries@james-driscoll.co.uk">enquiries@james-driscoll.co.uk</a>
+        <a class="email" href="mailto:enquiries@thomasline.uk">enquiries@thomasline.uk</a>
     </div>
 </div>
 <!-- Footer ends here -->  

@@ -172,6 +172,17 @@ body {
     display: inline;
 }
 
+/* --Footer Items------------------------------------------------------------ */
+.footer a.email {
+    color: grey;
+    font-family: Arial;
+    font-size: 15px;
+    text-decoration: none;
+}
+.footer a.email:hover {
+    text-decoration: underline;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

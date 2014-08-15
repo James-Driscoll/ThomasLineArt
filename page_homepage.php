@@ -62,21 +62,21 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
 
 <!-- Content Begins Here -->
-<?php
-        //Output the navigation
-      
-      $args = array(
-        "theme_location" => "top_navigation",
-        'container_class' => 'top-navigation container'
-        );
-      wp_nav_menu($args);
-      ?>
 
+<div class="home-nav">
+    <?php
+        //Output the navigation
+        $args = array(
+            "theme_location" => "top_navigation",
+            'container_class' => 'top-navigation container'
+        );
+        wp_nav_menu($args);
+    ?>
+</div>
 
 <a class="home-logo" href="<?php echo get_site_url(); ?>">
-     <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">
+    <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">
 </a>
-
 
 <!-- Content ends here -->
 

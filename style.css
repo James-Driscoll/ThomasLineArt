@@ -171,6 +171,10 @@ body {
 .home-logo {
     display: inline;
 }
+.home-nav {
+    margin-right: auto;
+    margin-left: auto;
+}
 
 /* --Footer Items------------------------------------------------------------ */
 .footer a.email {

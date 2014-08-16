@@ -108,7 +108,7 @@
       'not_found' =>  'No Studios found',
       'not_found_in_trash' => 'No Studios found in trash',
       'parent_item_colon' => '',
-      'menu_name' => 'Studios Menu'
+      'menu_name' => 'Studios'
     );
     
     $args = array(
@@ -124,12 +124,41 @@
       'show_in_admin_bar' => true,
       'hierarchical' => false,
       'menu_position' => 4,
-      'supports' => array( 'title'),
+      'supports' => array(
+        'title',
+        'editor',
+        'thumbnail',
+        'excerpt',
+        'comments',
+      ),
       'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
     );
 
     register_post_type('jdtla_studio', $args);
 
+  }
+
+  //Add filter to ensure the text Studio, or studio, is displayed when user updates a studio. (Rather than just using 'post')
+  add_filter('post_updated_messages', 'post_type_updated_messages');
+  function post_type_updated_messages( $messages ) {
+    global $post, $post_ID;
+    $messages['jdtla_studio'] = array(
+      0 => '', // Unused. Messages start at index 1.
+      1 => sprintf( __('Studio updated. <a href="%s">View Studio</a>'), esc_url( get_permalink($post_ID) ) ),
+      2 => __('Custom field updated.'),
+      3 => __('Custom field deleted.'),
+      4 => __('Studio updated.'),
+      /* translators: %s: date and time of the revision */
+      5 => isset($_GET['revision']) ? sprintf( __('Studio restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+      6 => sprintf( __('Studio published. <a href="%s">View Studio</a>'), esc_url( get_permalink($post_ID) ) ),
+      7 => __('Studio saved.'),
+      8 => sprintf( __('Studio submitted. <a target="_blank" href="%s">Preview Studio</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+      9 => sprintf( __('Studio scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Studio</a>'),
+      // translators: Publish box date format, see php.net/date
+      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+      10 => sprintf( __('Studio draft updated. <a target="_blank" href="%s">Preview Studio</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+    );
+    return $messages;
   }
 
   /* --------------------------------------------------

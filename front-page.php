@@ -9,7 +9,7 @@
  * Please see /external/starkers-utilities.php for info on get_template_parts()
  */
 
-if ( have_posts() ) while ( have_posts() ) : the_post();
+//if ( have_posts() ) while ( have_posts() ) : the_post();
  ?>
 
 <!DOCTYPE HTML>
@@ -79,5 +79,3 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 </a>
 
 <!-- Content ends here -->
-
-<?php  endwhile;

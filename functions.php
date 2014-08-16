@@ -71,7 +71,6 @@
   add_image_size( 'post-medium', 230, 230, true );
   add_image_size( 'post-small', 60, 60, true );
   add_image_size( 'post-thumb', 100,100, true );
-
   add_image_size( 'page-heading', 580, 260, true );
   add_image_size( 'page-casestudy', 221, 105, true );
 
@@ -79,10 +78,10 @@
    * Register Custom Menu
     -------------------------------------------------- */
   register_nav_menus(
-          array(
-              'top_navigation' => "Main Navigation Menu",
-          )
-      );
+    array(
+      'top_navigation' => "Main Navigation Menu",
+    )
+  );
 
   /* -------------------------------------------------------
       Custom Post Types

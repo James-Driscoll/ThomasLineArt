@@ -96,19 +96,19 @@
     Client Post Type
     --------------------------*/
     $labels = array(
-      'name' => 'Studios & Research',
-      'singular_name' => 'Studio & Research',
-      'add_new' => 'New Studio & Research',
-      'add_new_item' => 'Add New Studio & Research',
-      'edit_item' => 'Edit Studio & Research',
-      'new_item' => 'New Studio & Research',
-      'all_items' => 'All Studios & Research',
-      'view_item' => 'View Studio & Research',
-      'search_items' => 'Search Studios & Research',
-      'not_found' =>  'No tudios & Research found',
-      'not_found_in_trash' => 'No Studios & Research found in trash',
+      'name' => 'Studios',
+      'singular_name' => 'Studio',
+      'add_new' => 'New Studio',
+      'add_new_item' => 'Add New Studio',
+      'edit_item' => 'Edit Studio',
+      'new_item' => 'New Studio',
+      'all_items' => 'All Studios',
+      'view_item' => 'View Studio',
+      'search_items' => 'Search Studios',
+      'not_found' =>  'No Studios found',
+      'not_found_in_trash' => 'No Studios found in trash',
       'parent_item_colon' => '',
-      'menu_name' => 'Studios & Research'
+      'menu_name' => 'Studios Menu'
     );
     
     $args = array(
@@ -128,7 +128,7 @@
       'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
     );
 
-    register_post_type('product', $args);
+    register_post_type('jdtla_studio', $args);
 
   }
 

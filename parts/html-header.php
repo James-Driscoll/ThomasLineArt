@@ -7,9 +7,7 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>   
         <!-- Load up Google Fonts FAST -->
-        <link href='http://fonts.googleapis.com/css?family=Neuton:300,400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         
 		<title><?php wp_title( '|' ); ?></title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />

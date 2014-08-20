@@ -124,6 +124,7 @@
       'menu_position' => 5,
       'supports' => array(
         'title',
+        'editor',
         'thumbnail',
       )//,
       //'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",

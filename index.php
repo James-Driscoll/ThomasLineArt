@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Studio & Research
+ * Template Name: Index Template
  *
  * @package     WordPress
  * @subpackage  Starkers

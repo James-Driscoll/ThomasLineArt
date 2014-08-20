@@ -127,9 +127,14 @@
       'supports' => array(
         'title',
         'editor',
-        'thumbnail',
         'excerpt',
+        'trackbacks',
+        'custom-fields',
         'comments',
+        'revisions',
+        'thumbnail',
+        'author',
+        'page-attributes'
       ),
       'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
     );
@@ -161,41 +166,11 @@
     return $messages;
   }
 
-  /* --------------------------------------------------
-   Custom Categories
-  -----------------------------------------------------*/
-  //hook into the init action and call create_book_taxonomies when it fires
-  add_action( 'init', 'create_category_taxonomies', 0 );
-
-  //create two taxonomies, genres and writers for the post type "book"
-  function create_category_taxonomies()   {
-    // Add new taxonomy, make it hierarchical (like categories)
-    $labels = array(
-      'name' => "Product Categories",
-      'singular_name' => "Category",
-      'search_items' =>  "Search Categories",
-      'all_items' => "All Product Categories",
-      'parent_item' => "Parent Category",
-      'parent_item_colon' => "Parent Category:",
-      'edit_item' => "Edit Category",
-      'update_item' => "Update Category",
-      'add_new_item' => "Add New Category",
-      'new_item_name' => "New Category",
-      'menu_name' => "Categories",
-    );
-
-    register_taxonomy('categories','product', array(
-      'hierarchical' => true,
-      'labels' => $labels,
-      'show_ui' => true,
-      'uqery_var' => true,
-      'rewrite' => array( 'slug' => 'categories' ),
-    ));
-  }
-
   /* -------------------------------------------------------
       Custom Meta
   ------------------------------------------------------- */
+
+
   // Re-define meta box path and URL
   define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
   define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
@@ -204,11 +179,11 @@
 
   function create_metaboxes(){
     require "meta/meta-box.php";
-    $prefix     = 'p';
+    $prefix = 'p';
     $meta_boxes[] = array(
       'id'    => $prefix . 'pricing',
       'title' => 'Pricing & Range',
-      'pages' => array( 'product'),
+      'pages' => array( 'studio'),
       'fields' => array(
         array(
           'name' => "Current Price:",

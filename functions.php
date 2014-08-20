@@ -87,14 +87,11 @@
       Custom Post Types
   ------------------------------------------------------- */
   //hook into the init action and call create_book_taxonomies when it fires
-  add_action( 'init', 'create_post_types');
+  add_action( 'init', 'custom_post_studio');
 
   //create two taxonomies, genres and writers for the post type "book"
-  function create_post_types() {
+  function custom_post_studio() {
 
-    /* ------------------------
-    Client Post Type
-    --------------------------*/
     $labels = array(
       'name' => 'Studios',
       'singular_name' => 'Studio',
@@ -108,11 +105,12 @@
       'not_found' =>  'No Studios found',
       'not_found_in_trash' => 'No Studios found in trash',
       'parent_item_colon' => '',
-      'menu_name' => 'Studios'
+      'menu_name' => 'Studio & Research'
     );
     
     $args = array(
       'labels' => $labels,
+      'description' => 'Holds all Studio & Research items.',
       'public' => true,
       'publicly_queryable' => false,
       'show_ui' => true,
@@ -123,20 +121,12 @@
       'has_archive' => true,
       'show_in_admin_bar' => true,
       'hierarchical' => false,
-      'menu_position' => 4,
+      'menu_position' => 5,
       'supports' => array(
         'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
         'thumbnail',
-        'author',
-        'page-attributes'
-      ),
-      'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
+      )//,
+      //'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
     );
 
     register_post_type('jdtla_studio', $args);
@@ -144,8 +134,9 @@
   }
 
   //Add filter to ensure the text Studio, or studio, is displayed when user updates a studio. (Rather than just using 'post')
-  add_filter('post_updated_messages', 'post_type_updated_messages');
-  function post_type_updated_messages( $messages ) {
+  add_filter('post_updated_messages', 'custom_post_type_updated_messages');
+
+  function custom_post_type_updated_messages( $messages ) {
     global $post, $post_ID;
     $messages['jdtla_studio'] = array(
       0 => '', // Unused. Messages start at index 1.
@@ -169,8 +160,6 @@
   /* -------------------------------------------------------
       Custom Meta
   ------------------------------------------------------- */
-
-
   // Re-define meta box path and URL
   define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
   define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
@@ -179,80 +168,31 @@
 
   function create_metaboxes(){
     require "meta/meta-box.php";
-    $prefix = 'p';
+
     $meta_boxes[] = array(
-      'id'    => $prefix . 'pricing',
-      'title' => 'Pricing & Range',
-      'pages' => array( 'studio'),
+      'id'    => 'studio_image',
+      'title' => 'Upload Studio & Research Image Here',
+      'pages' => array( 'jdtla_studio'),
       'fields' => array(
         array(
-          'name' => "Current Price:",
-          'id' => $prefix."price-current",
-          "type" => "text"
-        ),
-        array(
-          'name' => "Old Price:",
-          'id' => $prefix."price-old",
-          "type" => "text"
-        ),
-        array(
-          'name' => "Range:",
-          'id' => $prefix."range",
-          "type" => "text"
-        ),
-        array(
-          'name'             => 'Gallery:',
-          'id'               => $prefix . 'images',
+          'name'             => 'Image:',
+          'id'               => 'studio_images',
           'type'             => 'plupload_image',
           'max_file_uploads' => 16,
         ),
       )
     );
 
-    $meta_boxes[] = array(
-      'id'    => $prefix . 'quantity',
-      'title' => 'Quantity',
-      'pages' => array( 'product'),
-      'fields' => array(
-        array(
-          'name' => "Bottle Quantity",
-          'id' => $prefix."bottle-quantity",
-          "type" => "text"
-        ),
-        array(
-          'name' => "Unit",
-          'id' => $prefix."unit",
-          "type" => "text"
-        ),
-      )
-    );
-
-    $meta_boxes[] = array(
-      'id'    => $prefix . 'background',
-      'title' => 'Background Image',
-      'pages' => array( 'product','page'),
-      'context' => 'side',
-      'priority' => 'low',
-      'fields' => array(
-        array(
-          'name' => "",
-          'id' => $prefix."background",
-          "type" => "plupload_image",
-          "max_file_uploads" => 1
-        ),
-      )
-    );
-
     if (class_exists( 'RW_Meta_Box' )) {
-      foreach ( $meta_boxes as $meta_box ) {
-        new RW_Meta_Box( $meta_box );
-      }
+        foreach ( $meta_boxes as $meta_box ) {
+            new RW_Meta_Box( $meta_box );
+        }
     }
   }
 
-
-
-  //Make the site private
+  /* -------------------------------------------------------
+      Make the site private
+  ------------------------------------------------------- */
   function is_local(){
     $whitelist = array('127.0.0.1');
     return in_array($_SERVER['REMOTE_ADDR'], $whitelist);

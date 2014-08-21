@@ -178,7 +178,7 @@
         array(
           'name'             => 'Image:',
           'id'               => 'studio_images',
-          'type'             => 'plupload_image',
+          'type'             => 'thickbox_image',
           'max_file_uploads' => 16,
         ),
       )

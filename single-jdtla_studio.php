@@ -2,6 +2,9 @@
 /**
  * Template Name: Studio & Research
  * 
+ * @package     WordPress
+ * @subpackage  Starkers
+ * @since       Starkers 4.0
  *
  */
 
@@ -11,7 +14,6 @@ get_template_parts( array( 'parts/html-header') ); ?>
 <?php
 $query = new WP_Query( array('post_type' => 'jdtla_studio', 'posts_per_page' => 5 ) );
 	while ( $query->have_posts() ) : $query->the_post(); ?>
-
 
 <?php
 $meta = rwmb_meta("studio_images");

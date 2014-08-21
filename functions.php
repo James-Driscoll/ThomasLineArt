@@ -118,7 +118,7 @@
       'query_var' => true,
       'rewrite' => array( 'slug' => 'studio'),
       'capability_type' => 'post',
-      'has_archive' => true,
+      'has_archive' => false,
       'show_in_admin_bar' => true,
       'hierarchical' => false,
       'menu_position' => 5,
@@ -130,6 +130,7 @@
     );
 
     register_post_type('jdtla_studio', $args);
+    flush_rewrite_rules();
 
   }
 

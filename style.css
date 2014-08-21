@@ -230,7 +230,30 @@ body {
     margin-left: auto;
 }
 
+/* --Studio Custom Post Items------------------------------------------------ */
+.studio-item {
+    float: left;
+    padding-left: 0px;
+}
+.studio-item li {
+    list-style: none;
+    padding: 10px;
+}
+.studio-item .studio-title h2 {
+    color: green;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #FEFF90;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
 /* --Footer Items------------------------------------------------------------ */
+.footer {
+    clear: both;
+}
 .footer a.email {
     color: #FEFF90;
     font-family: 'Lato', 'Helvetica', 'Arial';

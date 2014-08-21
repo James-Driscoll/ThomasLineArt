@@ -117,18 +117,22 @@ body {
 /* --Header Items----------------------------------------------------------- */
 .header .title a {
     font-size: 40px;
+    line-height: 40px;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-weight: normal;
     text-decoration: none;
-    color: #333;
+    color: #87D4B4;
+    background: #FEFF90;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
+    padding: 10px;
 }
 .header .title a:hover {
-    color: #000;
+    background: #87D4B4;
+    color: #E494CB;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -ms-transition: all .2s ease-in;
@@ -138,7 +142,6 @@ body {
 
 /* --Top Navigation Items--------------------------------------------------- */
 .top-nav {
-    text-align: center;
     margin: 0 auto;
     margin-bottom: 100px;
 }
@@ -151,6 +154,7 @@ body {
 .top-nav li a {
     display: inline-block;
     text-decoration: none;
+    text-align: center;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-size: 18px;
     width: 220px;
@@ -226,7 +230,7 @@ body {
     background: #F5F5F5;
 }
 
-/* --Home Page Logo Items---------------------------------------------------- */
+/* --Home Page Items--------------------------------------------------------- */
 .home-logo img {
     display: block;
     margin-left: auto;
@@ -331,7 +335,6 @@ body {
 }
 .studio-item li {
     list-style: none;
-    padding: 10px;
 }
 .studio-item .studio-title h2 {
     color: green;
@@ -349,13 +352,25 @@ body {
     clear: both;
 }
 .footer a.email {
-    color: #FEFF90;
+    color: #87D4B4;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-size: 15px;
+    padding: 7px;
     text-decoration: none;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 .footer a.email:hover {
     text-decoration: underline;
+    background: #FEFF90;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
 }
 
 /* ==========================================================================

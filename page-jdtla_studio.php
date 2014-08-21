@@ -20,7 +20,7 @@ if ($meta) {
     $image = wp_get_attachment_image_src($meta,"post-medium");
 } ?>
 
-<ul class="studio-item">
+<ul class="studio-item container">
 	<li class="studio-image"><a href="#"><img src="<?php echo $image[0]; ?>" height="230" width="230" /></a></li>
 	<li class="studio-title"><h2><?php the_title(); ?></h2></li>
 </ul>

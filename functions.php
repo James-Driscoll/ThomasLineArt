@@ -80,6 +80,7 @@
   register_nav_menus(
     array(
       'top_navigation' => "Main Navigation Menu",
+      'home_navigation' => "Home Navigation Menu"
     )
   );
 

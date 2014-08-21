@@ -21,11 +21,9 @@
 
 <head>        
     <!-- Load up Google Fonts FAST -->
-    <link href='http://fonts.googleapis.com/css?family=Neuton:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
 
-    <title><?php wp_title( '|' ); ?></title>
+    <title>Thomas Line Art | Home</title>
 
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -58,23 +56,19 @@
     ?>
 
     <script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
-
 </head>
 
 <body <?php body_class(); ?>>
-
     <!-- Content Begins Here -->
 
-    <div class="home-nav">
         <?php
           //Output the navigation
           $args = array(
-            "theme_location" => "top_navigation",
-            'container_class' => 'top-navigation container'
+            "theme_location" => "home_navigation",
+            'container_class' => 'home-nav'
           );
           wp_nav_menu($args);
         ?>
-    </div>
 
     <a class="home-logo" href="<?php echo get_site_url(); ?>">
         <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">

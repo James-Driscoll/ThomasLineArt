@@ -9,7 +9,7 @@
         <!-- Load up Google Fonts FAST -->
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         
-		<title><?php wp_title( '|' ); ?></title>
+		<title><?php wp_title( 'Thomas Line Art |' ); ?></title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -54,7 +54,7 @@
 				//Output the navigation
 			  	$args = array(
 				  "theme_location" => "top_navigation",
-				  'container_class' => 'top-navigation container'
+				  'container_class' => 'top-nav'
 				);
 				wp_nav_menu($args);
 			?>

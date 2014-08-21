@@ -175,10 +175,9 @@
       'pages' => array( 'jdtla_studio'),
       'fields' => array(
         array(
-          'name'             => 'Image:',
-          'id'               => 'studio_images',
-          'type'             => 'thickbox_image',
-          'max_file_uploads' => 16,
+          'name' => 'Image:',
+          'id' => 'studio_images',
+          'type' => 'thickbox_image',
         ),
       )
     );

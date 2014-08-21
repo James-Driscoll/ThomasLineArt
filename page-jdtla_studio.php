@@ -14,16 +14,19 @@ get_template_parts( array( 'parts/html-header') ); ?>
 <?php
 $query = new WP_Query( array('post_type' => 'jdtla_studio', 'posts_per_page' => 5 ) );
 	while ( $query->have_posts() ) : $query->the_post(); ?>
-<?php echo the_title(); ?>
 
-<div class="entry-content">
- <?php
-    if ( has_post_thumbnail() ) {
-      the_post_thumbnail();
+
+<?php
+$meta = rwmb_meta("studio_images");
+    $image = array("none.jpg");
+    if ($meta) {
+        $image = wp_get_attachment_image_src($meta,"post-medium");
     }
-      the_content();
     ?>
-</div>
+       
+	<img src="<?php echo $image[0]; ?>" height="230" width="230" />
+	<div class="heading">
+		<h1><?php the_title(); ?></h1>
 
 <?php  wp_reset_postdata(); ?>
 <?php endwhile;

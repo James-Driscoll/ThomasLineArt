@@ -137,6 +137,14 @@ body {
 }
 
 /* --Top Navigation Items--------------------------------------------------- */
+.top-nav {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.top-nav ul {
+    padding-left: 0px;
+}
 .top-nav li {
     display: inline;
 }
@@ -144,8 +152,10 @@ body {
     display: inline-block;
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
-    font-size: 15px;
-    padding: 25px;
+    font-size: 18px;
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
 }
 .top-nav .nav-item-1 a {
     -moz-transition: all .2s ease-in;
@@ -153,8 +163,8 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: none;
-    color: #87D4B4;
+    background: #90FFFD;
+    color: #E494CB;
 }
 .top-nav .nav-item-1 a:hover {
     -moz-transition: all .2s ease-in;
@@ -162,7 +172,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    color: #FEFF90;
+    background: #F5F5F5;
 }
 .top-nav .nav-item-2 a {
     -moz-transition: all .2s ease-in;
@@ -170,8 +180,8 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: none;
-    color: #90FFFD;
+    background: #FEFF90;
+    color: #87D4B4;
 }
 .top-nav .nav-item-2 a:hover {
     -moz-transition: all .2s ease-in;
@@ -187,8 +197,8 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: none;
-    color: #FEFF90;
+    background: #87D4B4;
+    color: #E494CB;
 }
 .top-nav .nav-item-3 a:hover {
     -moz-transition: all .2s ease-in;
@@ -204,8 +214,8 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: none;
-    color: #E498CC;
+    background: #90FFFD;
+    color: #E494CB;
 }
 .top-nav .nav-item-4 a:hover {
     -moz-transition: all .2s ease-in;
@@ -286,6 +296,7 @@ body {
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
     background: #87D4B4;
+    color: #E494CB;
 }
 .home-nav .nav-item-3 a:hover {
     -moz-transition: all .2s ease-in;

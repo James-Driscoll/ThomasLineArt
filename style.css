@@ -106,29 +106,32 @@ textarea {
    ========================================================================== */
 body {
     background: #E494CB;
-    width: 100%; 
+    width: 100%;
+    margin: 0;
 }
 
 /* --Container Items-------------------------------------------------------- */
 .container {
-    margin: 0px 30px;
+    margin: 30px;
 }
 
 /* --Header Items----------------------------------------------------------- */
-.header .title a {
+.header .title {
+    margin: 0;
     font-size: 40px;
-    line-height: 40px;
+}
+.header .title a {
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-weight: normal;
     text-decoration: none;
     color: #87D4B4;
     background: #FEFF90;
+    padding: 10px;
     -moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    padding: 10px;
 }
 .header .title a:hover {
     background: #87D4B4;
@@ -332,15 +335,21 @@ body {
 a.studio-item {
     float: left;
     padding-left: 0px;
-}
-a.studio-item .studio-title h2 {
-    color: green;
     text-decoration: none;
+}
+a.studio-itme .studio-image {
+
+}
+a.studio-item .studio-title {
+    color: green;
     text-align: center;
     font-family: 'Lato', 'Helvetica', 'Arial';
     color: #FEFF90;
     font-size: 15px;
     font-weight: normal;
+}
+a.studio-item:hover {
+    opacity: 0.7;
 }
 
 /* --Footer Items------------------------------------------------------------ */

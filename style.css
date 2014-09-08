@@ -329,14 +329,11 @@ body {
 }
 
 /* --Studio Custom Post Items------------------------------------------------ */
-.studio-item {
+a.studio-item {
     float: left;
     padding-left: 0px;
 }
-.studio-item li {
-    list-style: none;
-}
-.studio-item .studio-title h2 {
+a.studio-item .studio-title h2 {
     color: green;
     text-decoration: none;
     text-align: center;
@@ -345,7 +342,6 @@ body {
     font-size: 15px;
     font-weight: normal;
 }
-
 
 /* --Footer Items------------------------------------------------------------ */
 .footer {

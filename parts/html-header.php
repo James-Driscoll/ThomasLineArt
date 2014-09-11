@@ -44,7 +44,7 @@
         
     </head>
 
-    <body <?php body_class(); ?>>
+    <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
 
         <div class="header">
             	

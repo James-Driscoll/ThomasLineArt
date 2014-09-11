@@ -119,6 +119,15 @@ body {
     width: 100%;
     margin: 0;
 }
+body.page-id-9 {
+    background: #FEFF90;
+}
+body.page-id-11 {
+    background: #FFF;
+}
+body.page-id-50 {
+    background: #90FFFD;
+}
 
 /* --Container Items-------------------------------------------------------- */
 .container {
@@ -368,10 +377,9 @@ a.studio-itme .studio-image {
 
 }
 a.studio-item .studio-title {
-    color: green;
     text-align: center;
     font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #FEFF90;
+    color: #000;
     font-size: 15px;
     font-weight: normal;
 }

@@ -61,17 +61,13 @@
 <body <?php body_class(); ?>>
     <!-- Content Begins Here -->
 
-        <?php
-          //Output the navigation
-          $args = array(
-            "theme_location" => "home_navigation",
-            'container_class' => 'home-nav'
-          );
-          wp_nav_menu($args);
-        ?>
+    <?php
+      //Get the header(s)
+      get_template_parts( array( 'parts/html-header') );
+    ?>
 
-    <a class="home-logo" href="<?php echo get_site_url(); ?>">
-        <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">
+    <a class="home-logo container" href="<?php echo get_site_url(); ?>">
+       <img class="logo" height="576" width="720" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-home.gif" alt="Thomas Line Art logo">
     </a>
 
     <!-- Content ends here -->

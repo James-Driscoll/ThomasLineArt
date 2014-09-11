@@ -7,7 +7,17 @@ Author: 		James Driscoll
 Author URI: 	http://www.james-driscoll.co.uk
 Tags:
 */
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ 
+
+   --Colours--
+   ==============================================
+*  Black: #000;
+*  White: #FFF;
+*  Pink: #E498CC;
+*  Blue: #90FFFD;
+*  Yellow: #FEFF90;
+   ==============================================
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -105,14 +115,14 @@ textarea {
    $ Site Items
    ========================================================================== */
 body {
-    background: #E494CB;
+    background: #E498CC;
     width: 100%;
     margin: 0;
 }
 
 /* --Container Items-------------------------------------------------------- */
 .container {
-    margin: 30px;
+    width: 90%;
 }
 
 /* --Header Items----------------------------------------------------------- */
@@ -152,17 +162,20 @@ body {
     padding-left: 0px;
 }
 .top-nav li {
-    display: inline;
+    display: block;
 }
 .top-nav li a {
     display: inline-block;
     text-decoration: none;
-    text-align: center;
     font-family: 'Lato', 'Helvetica', 'Arial';
-    font-size: 18px;
+    font-size: 30px;
     width: 220px;
-    height: 60px;
-    line-height: 60px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.top-nav li a:hover {
+    opacity: 0.7;
 }
 .top-nav .nav-item-1 a {
     -moz-transition: all .2s ease-in;
@@ -170,8 +183,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #90FFFD;
-    color: #E494CB;
+    color: #E498CC;
 }
 .top-nav .nav-item-1 a:hover {
     -moz-transition: all .2s ease-in;
@@ -179,7 +191,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #F5F5F5;
+    color: #000;
 }
 .top-nav .nav-item-2 a {
     -moz-transition: all .2s ease-in;
@@ -187,8 +199,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #FEFF90;
-    color: #87D4B4;
+    color: #FEFF90;
 }
 .top-nav .nav-item-2 a:hover {
     -moz-transition: all .2s ease-in;
@@ -196,7 +207,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #F5F5F5;
+
 }
 .top-nav .nav-item-3 a {
     -moz-transition: all .2s ease-in;
@@ -204,8 +215,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #87D4B4;
-    color: #E494CB;
+    color: #FFF;
 }
 .top-nav .nav-item-3 a:hover {
     -moz-transition: all .2s ease-in;
@@ -213,7 +223,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #F5F5F5;
+
 }
 .top-nav .nav-item-4 a {
     -moz-transition: all .2s ease-in;
@@ -221,8 +231,7 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #90FFFD;
-    color: #E494CB;
+    color: #90FFFD;
 }
 .top-nav .nav-item-4 a:hover {
     -moz-transition: all .2s ease-in;
@@ -230,7 +239,14 @@ body {
     -ms-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
-    background: #F5F5F5;
+}
+.top-nav ul .current-page-ancestor:hover a,
+.top-nav ul .current-page-ancestor a,
+.top-nav ul .current-page-item:hover a,
+.top-nav ul .current-menu-item:hover a,
+.top-nav ul .current-page-item a,
+.top-nav ul .current-menu-item a {
+    color: #000;
 }
 
 /* --Home Page Items--------------------------------------------------------- */

@@ -47,14 +47,12 @@
     <body <?php body_class(); ?>>
 
         <div class="container header">
-            
-            <h1 class="title"><a href="http://art.thomasline.uk">Thomas Line</a></h1>
-        
+            	
 			<?php
 				//Output the navigation
 			  	$args = array(
 				  "theme_location" => "top_navigation",
-				  'container_class' => 'top-nav'
+				  'container_class' => 'top-nav container'
 				);
 				wp_nav_menu($args);
 			?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Portfolio
+ * Template Name: CV
  *
  * @package 	WordPress
  * @subpackage 	Starkers
@@ -12,24 +12,10 @@
 //Get the header(s)
 get_template_parts( array( 'parts/html-header') );
 
+if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-function em($name,$echo = true){
-	$meta = rwmb_meta($name);
-	if ($echo){
-		echo $meta;
-	}
-	return $meta;
-}
-
-if ( have_posts() ) while ( have_posts() ) : the_post(); 
-?>
-
-<div class="content">
-	<div class="container paragraph">
-    	<h1 class="title"><?php echo get_the_title(); ?></h1>
-    	<p><?php the_content(); ?></p>
-   
-	</div>
+<div class="container cv">
+   	<h2 class="description"><?php echo the_content(); ?></h2>
 </div>
 
 

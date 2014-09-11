@@ -58,7 +58,7 @@
     <script>site = {ss: "<?php echo get_stylesheet_directory_uri(); ?>"};</script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="body-background">
     <!-- Content Begins Here -->
 
     <?php

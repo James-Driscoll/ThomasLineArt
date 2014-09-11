@@ -46,7 +46,7 @@
 
     <body <?php body_class(); ?>>
 
-        <div class="container header">
+        <div class="header">
             	
 			<?php
 				//Output the navigation
@@ -56,5 +56,3 @@
 				);
 				wp_nav_menu($args);
 			?>
-
-		</div>

@@ -106,12 +106,12 @@
       'not_found' =>  'No Studios found',
       'not_found_in_trash' => 'No Studios found in trash',
       'parent_item_colon' => '',
-      'menu_name' => 'Studio & Research'
+      'menu_name' => 'Studios'
     );
     
     $args = array(
       'labels' => $labels,
-      'description' => 'Holds all Studio & Research items.',
+      'description' => 'Holds all Studio items.',
       'public' => true,
       'publicly_queryable' => false,
       'show_ui' => true,

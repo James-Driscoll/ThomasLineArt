@@ -119,13 +119,13 @@ body {
     width: 100%;
     margin: 0;
 }
-body.page-id-9 {
+body.page-id-7 {
     background: #FEFF90;
 }
-body.page-id-11 {
+body.page-id-9 {
     background: #FFF;
 }
-body.page-id-50 {
+body.page-id-11 {
     background: #90FFFD;
 }
 
@@ -365,7 +365,6 @@ body.page-id-50 {
 .studio {
     min-height: 700px;
     margin: 0 auto;
-    text-align:center;
 }
 a.studio-item {
     display:inline-block;

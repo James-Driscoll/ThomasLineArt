@@ -66,13 +66,9 @@
   /* -------------------------------------------------------
   	Post Thumbnails
   ------------------------------------------------------- */
-  add_image_size( 'post-background', 960, 345, true );
-  add_image_size( 'post-large', 450, 350, true );
-  add_image_size( 'post-medium', 230, 230, true );
-  add_image_size( 'post-small', 60, 60, true );
-  add_image_size( 'post-thumb', 100,100, true );
-  add_image_size( 'page-heading', 580, 260, true );
-  add_image_size( 'page-casestudy', 221, 105, true );
+
+  add_theme_support( 'post-thumbnails' ); 
+
 
   /* --------------------------------------------------
    * Register Custom Menu

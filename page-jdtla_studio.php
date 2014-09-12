@@ -22,7 +22,8 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
 		
 			<a class="studio-item" href="<?php the_permalink() ?>">
-				<img class="studio-image" src="<?php echo $image[0]; ?>" height="230" width="230">
+				
+				<?php the_post_thumbnail('medium'); ?>
 				<h2 class="studio-title"><?php the_title(); ?></h2>
 			</a>
 		

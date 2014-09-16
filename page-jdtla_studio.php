@@ -2,6 +2,9 @@
 /**
  * Template Name: Studio & Research
  * 
+ * @package WordPress
+ * @subpackage ThomasLineArt
+ *
  */
 
 //Get The Header

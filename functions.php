@@ -89,71 +89,39 @@
   //create two taxonomies, genres and writers for the post type "book"
   function custom_post_studio() {
 
-    $labels = array(
-      'name' => 'Studios',
-      'singular_name' => 'Studio',
-      'add_new' => 'New Studio',
-      'add_new_item' => 'Add New Studio',
-      'edit_item' => 'Edit Studio',
-      'new_item' => 'New Studio',
-      'all_items' => 'All Studios',
-      'view_item' => 'View Studio',
-      'search_items' => 'Search Studios',
-      'not_found' =>  'No Studios found',
-      'not_found_in_trash' => 'No Studios found in trash',
-      'parent_item_colon' => '',
-      'menu_name' => 'Studios'
-    );
-    
-    $args = array(
-      'labels' => $labels,
-      'description' => 'Holds all Studio items.',
+
+  // creating (registering) the custom type 
+  register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+    // let's now add all the options for this post type
+    array('labels' => array(
+      'name' => __('Studios', 'post type general name'), /* The Title of the Group */
+      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+      'add_new_item' => __('Add New Studio'), /* Add New Display Title */
+      'edit' => __( 'Edit' ), /* Edit Dialog */
+      'edit_item' => __('Edit Studio'), /* Edit Display Title */
+      'new_item' => __('New Studio'), /* New Display Title */
+      'view_item' => __('View Studios'), /* View Display Title */
+      'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
+      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
+      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+      'parent_item_colon' => ''
+      ), /* end of arrays */
+      'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
       'public' => true,
-      'publicly_queryable' => false,
+      'publicly_queryable' => true,
+      'exclude_from_search' => false,
       'show_ui' => true,
-      'show_in_menu' => true,
       'query_var' => true,
-      'rewrite' => array( 'slug' => 'studio'),
+      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
+      'rewrite' => true,
       'capability_type' => 'post',
-      'has_archive' => false,
-      'show_in_admin_bar' => true,
       'hierarchical' => false,
-      'menu_position' => 5,
-      'supports' => array(
-        'title',
-        'thumbnail',
-      )//,
-      //'menu_icon' => get_stylesheet_directory_uri()."/images/admin/studio.png",
-    );
-
-    register_post_type('jdtla_studio', $args);
-    flush_rewrite_rules();
-
-  }
-
-  //Add filter to ensure the text Studio, or studio, is displayed when user updates a studio. (Rather than just using 'post')
-  add_filter('post_updated_messages', 'custom_post_type_updated_messages');
-
-  function custom_post_type_updated_messages( $messages ) {
-    global $post, $post_ID;
-    $messages['jdtla_studio'] = array(
-      0 => '', // Unused. Messages start at index 1.
-      1 => sprintf( __('Studio updated. <a href="%s">View Studio</a>'), esc_url( get_permalink($post_ID) ) ),
-      2 => __('Custom field updated.'),
-      3 => __('Custom field deleted.'),
-      4 => __('Studio updated.'),
-      /* translators: %s: date and time of the revision */
-      5 => isset($_GET['revision']) ? sprintf( __('Studio restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-      6 => sprintf( __('Studio published. <a href="%s">View Studio</a>'), esc_url( get_permalink($post_ID) ) ),
-      7 => __('Studio saved.'),
-      8 => sprintf( __('Studio submitted. <a target="_blank" href="%s">Preview Studio</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-      9 => sprintf( __('Studio scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Studio</a>'),
-      // translators: Publish box date format, see php.net/date
-      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-      10 => sprintf( __('Studio draft updated. <a target="_blank" href="%s">Preview Studio</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-    );
-    return $messages;
-  }
+      /* the next one is important, it tells what's enabled in the post editor */
+      'supports' => array( 'title', 'thumbnail',)
+    ) /* end of options */
+  ); /* end of register post type */
+} 
 
 /* -------------------------------------------------------
   Custom Meta

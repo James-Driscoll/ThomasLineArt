@@ -1,5 +1,6 @@
 <?php
-/**
+/*
+ *
  * Template Name: Studio & Research
  * 
  * @package WordPress

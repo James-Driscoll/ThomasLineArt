@@ -362,6 +362,7 @@ body.page-id-50 {
 }
 
 /* --Studio Custom Post Items------------------------------------------------ */
+/* --Page Items-------------------------------*/
 .studio {
     min-height: 700px;
     margin: 0 auto;
@@ -386,6 +387,23 @@ a.studio-item .studio-title {
 }
 a.studio-item:hover {
     opacity: 0.7;
+}
+/* --Single Items-----------------------------*/
+.single-studio img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-studio .details {
+    list-style: none;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
+}
+.single-studio .details .title h1 {
+    font-size: 40px;
+    font-weight: bold;
 }
 
 /* --Footer Items------------------------------------------------------------ */

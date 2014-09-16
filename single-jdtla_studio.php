@@ -12,12 +12,16 @@
 get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="container">
-	<div class="studio">
+	<div class="single-studio">
 
-			<a class="studio-item" href="<?php the_permalink() ?>">
-				<?php the_post_thumbnail('full'); ?>
-				<h2 class="studio-title"><?php the_title(); ?></h2>
-			</a>
+			<?php the_post_thumbnail('full'); ?>
+			<ul class="details">
+				<li class="title"><h1>Title: <?php the_title(); ?></h1></li>
+				<li class="materials"><h2>Materials: <?php echo rwmb_meta("smaterials") ?></h2></li>
+				<li class=""><h2>Extra Parameter 2: <?php echo rwmb_meta("spar2") ?></h2></li>
+				<li class=""><h2>Extra Parameter 3: <?php echo rwmb_meta("spar3") ?></h2></li>
+				<li class=""><h2>Extra Parameter 4: <?php echo rwmb_meta("spar4") ?></h2></li>
+			</ul>
 
 	</div>
 </div>

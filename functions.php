@@ -155,37 +155,54 @@
     return $messages;
   }
 
-  /* -------------------------------------------------------
-      Custom Meta
-  ------------------------------------------------------- */
-  // Re-define meta box path and URL
-  define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
-  define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
+/* -------------------------------------------------------
+  Custom Meta
+------------------------------------------------------- */
+// Re-define meta box path and URL
+define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
+define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
 
-  add_action( 'init', 'create_metaboxes');
+add_action( 'init', 'create_metaboxes');
 
-  function create_metaboxes(){
+function create_metaboxes(){
     require "meta/meta-box.php";
+    $prefix     = 's';
 
     $meta_boxes[] = array(
-      'id'    => 'studio_image',
-      'title' => 'Upload Studio & Research Image Here',
-      'pages' => array( 'jdtla_studio'),
-      'fields' => array(
-        array(
-          'name' => 'Image:',
-          'id' => 'studio_images',
-          'type' => 'thickbox_image',
-        ),
-      )
+        'id'    => $prefix . 'details',
+        'title' => 'Studio Details',
+        'pages' => array( 'jdtla_studio'),
+        'content' => 'normal',
+        'fields' => array(
+            array(
+                'name' => 'Materials',
+                'id'   => "{$prefix}materials",
+                'type' => 'textarea',
+            ),
+            array(
+                'name' => 'Parameter 2',
+                'id'   => "{$prefix}par2",
+                'type' => 'textarea',
+            ), 
+            array(
+                'name' => 'Parameter 3',
+                'id'   => "{$prefix}par3",
+                'type' => 'textarea',
+            ), 
+            array(
+                'name' => 'Parameter 4',
+                'id'   => "{$prefix}par4",
+                'type' => 'textarea',
+            ),                                   
+        )
     );
 
     if (class_exists( 'RW_Meta_Box' )) {
-        foreach ( $meta_boxes as $meta_box ) {
-            new RW_Meta_Box( $meta_box );
-        }
+            foreach ( $meta_boxes as $meta_box ) {
+                    new RW_Meta_Box( $meta_box );
+            }
     }
-  }
+}
 
   /* -------------------------------------------------------
       Make the site private

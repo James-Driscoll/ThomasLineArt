@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Template Name: Studio & Research
+ * Template Name: Studio
  * 
  * @package WordPress
  * @subpackage ThomasLineArt

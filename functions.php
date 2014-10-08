@@ -74,7 +74,6 @@
     -------------------------------------------------- */
   register_nav_menus(
     array(
-      'top_navigation' => "Main Navigation Menu",
       'home_navigation' => "Home Navigation Menu"
     )
   );
@@ -148,17 +147,17 @@ function create_metaboxes(){
                 'type' => 'textarea',
             ),
             array(
-                'name' => 'Parameter 2',
+                'name' => 'Description',
                 'id'   => "{$prefix}par2",
                 'type' => 'textarea',
             ), 
             array(
-                'name' => 'Parameter 3',
+                'name' => 'References',
                 'id'   => "{$prefix}par3",
                 'type' => 'textarea',
             ), 
             array(
-                'name' => 'Parameter 4',
+                'name' => 'Field 4',
                 'id'   => "{$prefix}par4",
                 'type' => 'textarea',
             ),                                   

@@ -62,7 +62,7 @@
     <!-- Content Begins Here -->
 
     <?php
-      //Get the header(s)
+      //Get the header
       get_template_parts( array( 'parts/html-header') );
     ?>
 
@@ -71,3 +71,8 @@
     </a>
 
     <!-- Content ends here -->
+
+    <?php
+      //Get the footer
+      get_template_parts( array( 'parts/html-footer') );
+    ?>

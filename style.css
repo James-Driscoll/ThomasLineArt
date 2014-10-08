@@ -14,7 +14,7 @@ Tags:
 *  Black: #000;
 *  White: #FFF;
 *  Pink: #E498CC;
-*  Blue: #90FFFD;
+*  Turquise: #90FFFD;
 *  Yellow: #FEFF90;
    ==============================================
 
@@ -119,13 +119,22 @@ body {
     width: 100%;
     margin: 0;
 }
-body.page-id-9 {
+body.page-template-page-jdtla_studio-php {
     background: #FEFF90;
 }
-body.page-id-11 {
+body.single-jdtla_studio {
+    background: #FEFF90;
+}
+body.page-template-page-jdtla_work-php {
     background: #FFF;
 }
-body.page-id-50 {
+body.single-jdtla_work-php {
+    background: #FFF;
+}
+body.page-template-page-jdtla_work-php {
+    background: #FFF;
+}
+body.cv {
     background: #90FFFD;
 }
 

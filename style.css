@@ -260,7 +260,9 @@ body.cv {
 .top-nav ul .current-page-item:hover a,
 .top-nav ul .current-menu-item:hover a,
 .top-nav ul .current-page-item a,
-.top-nav ul .current-menu-item a {
+.top-nav ul .current-menu-item a,
+.single-jdtla_studio .top-nav ul .nav-item-2 a,
+.single-jdtla_work .top-nav ul .nav-item-3 a {
     color: #000;
 }
 

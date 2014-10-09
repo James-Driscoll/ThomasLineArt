@@ -19,7 +19,6 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
 			<a class="studio-item" href="<?php the_permalink() ?>">
 				<?php the_post_thumbnail('medium'); ?>
-				<h2 class="studio-title"><?php the_title(); ?></h2>
 			</a>
 
 			<?php  wp_reset_postdata();

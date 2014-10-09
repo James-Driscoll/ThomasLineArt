@@ -14,7 +14,7 @@ get_template_parts( array( 'parts/html-header') ); ?>
 <div class="container">
 	<div class="single-studio">
 
-			<?php the_post_thumbnail('full'); ?>
+			<?php the_post_thumbnail('large'); ?>
 			<ul class="details">
 				<li class="title"><h1>Title: <?php the_title(); ?></h1></li>
 				<li class="materials"><h2>Materials: <?php echo rwmb_meta("smaterials") ?></h2></li>

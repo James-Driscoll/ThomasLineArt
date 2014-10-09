@@ -119,19 +119,12 @@ body {
     width: 100%;
     margin: 0;
 }
-body.page-template-page-jdtla_studio-php {
-    background: #FEFF90;
-}
+body.page-template-page-jdtla_studio-php,
 body.single-jdtla_studio {
     background: #FEFF90;
 }
-body.page-template-page-jdtla_work-php {
-    background: #FFF;
-}
-body.single-jdtla_work-php {
-    background: #FFF;
-}
-body.page-template-page-jdtla_work-php {
+body.page-template-page-jdtla_work-php,
+body.single-jdtla_work {
     background: #FFF;
 }
 body.cv {

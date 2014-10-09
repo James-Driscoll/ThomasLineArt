@@ -12,7 +12,7 @@
 get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="container">
-	<div class="single-work">
+	<div class="cp-single">
             
 	    <?php if (have_posts()) ?>
 	        <?php while (have_posts()) : the_post(); ?>

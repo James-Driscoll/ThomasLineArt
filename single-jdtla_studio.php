@@ -13,15 +13,15 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="container">
 	<div class="single-studio">
+            
+	    <?php if (have_posts()) ?>
+	        <?php while (have_posts()) : the_post(); ?>
 
-			<?php the_post_thumbnail('large'); ?>
-			<ul class="details">
-				<li class="title"><h1>Title: <?php the_title(); ?></h1></li>
-				<li class="materials"><h2>Materials: <?php echo rwmb_meta("smaterials") ?></h2></li>
-				<li class=""><h2>Details: <?php echo rwmb_meta("spar2") ?></h2></li>
-				<li class=""><h2>References: <?php echo rwmb_meta("spar3") ?></h2></li>
-				<li class=""><h2>Extra Parameter 4: <?php echo rwmb_meta("spar4") ?></h2></li>
-			</ul>
+				<?php the_post_thumbnail('large'); ?>
+				<h1 class="title"><?php the_title(); ?></h1>
+				<h3 class="description"><?php the_content(); ?></h3>
+
+ 			<?php endwhile; ?>
 
 	</div>
 </div>

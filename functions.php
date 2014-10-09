@@ -88,88 +88,39 @@
   //create two taxonomies, genres and writers for the post type "book"
   function custom_post_studio() {
 
+    // creating (registering) the custom type 
+    register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+      // let's now add all the options for this post type
+      array('labels' => array(
+        'name' => __('Studios', 'post type general name'), /* The Title of the Group */
+        'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+        'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+        'add_new_item' => __('Add New Studio'), /* Add New Display Title */
+        'edit' => __( 'Edit' ), /* Edit Dialog */
+        'edit_item' => __('Edit Studio'), /* Edit Display Title */
+        'new_item' => __('New Studio'), /* New Display Title */
+        'view_item' => __('View Studios'), /* View Display Title */
+        'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
+        'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
+        'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+        'parent_item_colon' => ''
+        ), /* end of arrays */
+        'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
+        'public' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_ui' => true,
+        'query_var' => true,
+        'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        /* the next one is important, it tells what's enabled in the post editor */
+        'supports' => array( 'title', 'editor', 'thumbnail')
+      ) /* end of options */
+    ); /* end of register post type */
 
-  // creating (registering) the custom type 
-  register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-    // let's now add all the options for this post type
-    array('labels' => array(
-      'name' => __('Studios', 'post type general name'), /* The Title of the Group */
-      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
-      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Studio'), /* Add New Display Title */
-      'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Studio'), /* Edit Display Title */
-      'new_item' => __('New Studio'), /* New Display Title */
-      'view_item' => __('View Studios'), /* View Display Title */
-      'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
-      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
-      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
-      'parent_item_colon' => ''
-      ), /* end of arrays */
-      'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
-      'public' => true,
-      'publicly_queryable' => true,
-      'exclude_from_search' => false,
-      'show_ui' => true,
-      'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
-      'rewrite' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      /* the next one is important, it tells what's enabled in the post editor */
-      'supports' => array( 'title', 'thumbnail',)
-    ) /* end of options */
-  ); /* end of register post type */
-} 
-
-/* -------------------------------------------------------
-  Custom Meta
-------------------------------------------------------- */
-// Re-define meta box path and URL
-define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri())."meta/" );
-define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH  )."meta/" );
-
-add_action( 'init', 'create_metaboxes');
-
-function create_metaboxes(){
-    require "meta/meta-box.php";
-    $prefix     = 's';
-
-    $meta_boxes[] = array(
-        'id'    => $prefix . 'details',
-        'title' => 'Studio Details',
-        'pages' => array( 'jdtla_studio'),
-        'content' => 'normal',
-        'fields' => array(
-            array(
-                'name' => 'Materials',
-                'id'   => "{$prefix}materials",
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => 'Description',
-                'id'   => "{$prefix}par2",
-                'type' => 'textarea',
-            ), 
-            array(
-                'name' => 'References',
-                'id'   => "{$prefix}par3",
-                'type' => 'textarea',
-            ), 
-            array(
-                'name' => 'Field 4',
-                'id'   => "{$prefix}par4",
-                'type' => 'textarea',
-            ),                                   
-        )
-    );
-
-    if (class_exists( 'RW_Meta_Box' )) {
-            foreach ( $meta_boxes as $meta_box ) {
-                    new RW_Meta_Box( $meta_box );
-            }
-    }
-}
+  } 
 
   /* -------------------------------------------------------
       Make the site private

@@ -374,8 +374,7 @@ body.cv {
 
 /* --Studio Custom Post Items------------------------------------------------ */
 /* --Page Items-------------------------------*/
-.studio {
-    min-height: 700px;
+.page-studio {
     margin: 0 auto;
 }
 a.studio-item {
@@ -403,19 +402,22 @@ a.studio-item:hover {
     transition: all .1s ease-in;
 }
 /* --Single Items-----------------------------*/
+.single-studio {
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+}
 .single-studio img {
     display: block;
 }
-.single-studio .details {
-    list-style: none;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
+.single-studio .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+.single-studio .description p {
     font-size: 15px;
     font-weight: normal;
-}
-.single-studio .details .title h1 {
-    font-size: 40px;
-    font-weight: bold;
 }
 
 /* --Footer Items------------------------------------------------------------ */
@@ -426,24 +428,25 @@ a.studio-item:hover {
 }
 .footer div {
     font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 15px;
+    font-weight: normal;
 }
 .footer a {
     text-decoration: none;
+    color: #000;
 }
 .footer .email a {
     float: left;
-    color: #000;
     display: block;
 }
 .footer .copy {
-    color: #000;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 .footer .developer a {
     float: right;
-    color: #000;
 }
 .footer a:hover {
     text-decoration: underline;

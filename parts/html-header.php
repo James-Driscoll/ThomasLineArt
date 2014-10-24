@@ -51,7 +51,7 @@
 			<?php
 				//Output the navigation
 			  	$args = array(
-				  "theme_location" => "home_navigation",
+				  "theme_location" => "top_navigation",
 				  'container_class' => 'top-nav container'
 				);
 				wp_nav_menu($args);

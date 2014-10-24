@@ -74,7 +74,7 @@
     -------------------------------------------------- */
   register_nav_menus(
     array(
-      'home_navigation' => "Home Navigation Menu"
+      'top_navigation' => "Top Navigation Menu"
     )
   );
 

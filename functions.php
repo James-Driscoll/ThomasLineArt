@@ -158,6 +158,39 @@
 
   } 
 
+  /* --------------------------------------------------
+   Custom Work Categories
+  -----------------------------------------------------*/
+  //hook into the init action and call create_book_taxonomies when it fires
+  add_action( 'init', 'create_category_taxonomies', 0 );
+
+  //create two taxonomies, genres and writers for the post type "book"
+  function create_category_taxonomies()   {
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+      'name' => "Work Categories",
+      'singular_name' => "Category",
+      'search_items' =>  "Search Categories",
+      'all_items' => "All Product Categories",
+      'parent_item' => "Parent Category",
+      'parent_item_colon' => "Parent Category:",
+      'edit_item' => "Edit Category",
+      'update_item' => "Update Category",
+      'add_new_item' => "Add New Category",
+      'new_item_name' => "New Category",
+      'menu_name' => "Categories",
+    );
+
+    register_taxonomy('categories','jdtla_work', array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'uqery_var' => true,
+      'rewrite' => array( 'slug' => 'categories' ),
+    ));
+  }
+
+
   /* -------------------------------------------------------
       Make the site private
   ------------------------------------------------------- */

@@ -14,6 +14,8 @@ get_template_parts( array( 'parts/html-header') ); ?>
 <div class="container">
 	<div class="page-studio">
 
+	<div class=""
+
 		<?php $query = new WP_Query( array('post_type' => 'jdtla_work', 'posts_per_page' => 1000 ) );
 		while ( $query->have_posts() ) : $query->the_post(); ?>
 

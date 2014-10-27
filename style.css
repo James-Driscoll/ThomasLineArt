@@ -325,6 +325,14 @@ a.item:hover {
     font-weight: normal;
 }
 
+/* --Work Category Items----------------------*/
+.pc .pc-title {
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+}
+
 /* --Footer Items------------------------------------------------------------ */
 .footer {
     clear: both;

@@ -1,23 +1,29 @@
-<!DOCTYPE HTML>
-<!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
-<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>   
-        <!-- Load up Google Fonts FAST -->
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        
+       
 		<title><?php wp_title( 'Thomas Line Art |' ); ?></title>
+		
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  	<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Google Font -->
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+        <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3"/>
-		<!--<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/normalize.css?v=3"/>-->
 
-		<meta name="viewport" content="width=device-width">
+		<!-- Bootstrap Style-->
+        <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom Style -->
+        <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css?v=3" rel="stylesheet">
 
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="<?php echo get_bloginfo("url"); ?>" />
@@ -45,6 +51,10 @@
     </head>
 
     <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
         <div class="header">
             	

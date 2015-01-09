@@ -287,25 +287,38 @@ a.item {
     padding-left: 0px;
     margin: 2.5px;
     text-decoration: none;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
 }
 a.item img {
     margin-right: auto;
     margin-left: auto;
     display: block;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
 }
-a.item:hover {
-    opacity: 0.7;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+a.item img.grey {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
 }
+.item img#colour {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    -moz-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+}
+
 /* --Single Items-----------------------------*/
 .cp-single {
     font-family: 'Lato', 'Helvetica', 'Arial';

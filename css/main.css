@@ -315,6 +315,7 @@ a.item:hover {
 }
 .cp-single img {
     display: block;
+    margin-top: 20px;
 }
 .cp-single .title {
     font-size: 25px;

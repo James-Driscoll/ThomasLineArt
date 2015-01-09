@@ -19,11 +19,8 @@
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
-		<!-- Bootstrap Style-->
-        <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Custom Style -->
-        <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.css?v=3" rel="stylesheet">
+        <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
 
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="<?php echo get_bloginfo("url"); ?>" />

@@ -1,10 +1,10 @@
 #ThomasLineArt
 
-ThomasLineArt is a custom Wordpress theme that includes both a custom front-end and also the customised setup of functions, meta, post types and more.
+ThomasLineArt is a custom Wordpress theme that includes both a custom front-end and also the setup of custom post types and categories.
 
 ## Access
 * Source Code: [https://github.com/James-Driscoll/ThomasLineArt.git](https://github.com/James-Driscoll/ThomasLineArt.git)
-* Live Domain: [art.thomasline.uk](http://art.thomasline.uk)
+* Live Domain: [art.thomasline.uk](http://art.thomasline.uk) (Not live yet, still in staging.)
 * Staging Domain: [staging.jamesdriscoll.london/artthomaslineuk](http://staging.jamesdriscoll.london/artthomaslineuk)
 
 ## Use Case
@@ -17,6 +17,7 @@ The purpose of this project is to enable an art student to easily manage and adm
 * W3Schools: [http://www.w3schools.com](http://www.w3schools.com)
 * StackOverflow: [http://stackoverflow.com](http://stackoverflow.com)
 * Google Analytics: [http://www.google.com/analytics](http://www.google.com/analytics)
+* Bootstrap: [http://getbootstrap.com/](http://getbootstrap.com/)
 
 ## Improvements & Next Steps
 * To add a sticky navigation menu to the Header section of the page.

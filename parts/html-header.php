@@ -19,6 +19,9 @@
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
         <!-- Custom Style -->
         <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
 
@@ -29,17 +32,6 @@
 
 		<!-- IE Stuff -->
 		<meta http-equiv="imagetoolbar" content="false" />
-
-		<!-- JQuery -->
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.7.1.min.js" ></script>
-
-		<!-- BxSlider -->
-		<script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
-
-		<!-- Site Javascript -->
-		<script src="<?php echo get_stylesheet_directory_uri();?>/js/site.js"></script>
-
-
 
 		<?php wp_head(); ?>
 

@@ -287,24 +287,26 @@ a.item {
     padding-left: 0px;
     margin: 2.5px;
     text-decoration: none;
+    border: 1px solid transparent;
+    margin: 5px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+
 }
 a.item img {
     margin-right: auto;
     margin-left: auto;
     display: block;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -ms-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+
 }
 a.item:hover {
-    opacity: 0.7;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    transform: scale(1.1);
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;

@@ -287,7 +287,7 @@ a.item {
     padding-left: 0px;
     margin: 2.5px;
     text-decoration: none;
-    border: 1px solid transparent;
+    border: none;
     margin: 5px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;

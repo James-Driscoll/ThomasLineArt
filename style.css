@@ -348,7 +348,10 @@ a.item:hover {
 }
 
 /* --Work Category Items----------------------*/
-.pc .pc-title {
+.page-work {
+    padding-left: 40px;
+}
+.pc-title {
     font-family: 'Lato', 'Helvetica', 'Arial';
     color: #000;
     font-size: 18px;

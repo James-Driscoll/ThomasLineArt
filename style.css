@@ -175,7 +175,7 @@ body.cv {
 .nav li {
     display: block;
 }
-.nav li a {
+.page-nav li a {
     display: inline-block;
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
@@ -270,7 +270,16 @@ body.cv {
 .social-nav {
     float: right;
 }
-.social-nav {}
+.social-nav li i {
+    font-size: 60px;
+    color: #E498CC;
+}
+.social-nav li a:hover {
+    background: none;
+}
+.social-nav li a:hover i {
+    color: #000;
+}
 
 /* --Home Page Items--------------------------------------------------------- */
 .home-logo img {
@@ -280,6 +289,12 @@ body.cv {
 }
 .home-logo {
     display: inline;
+}
+.page-template-home .social-nav li i {
+    color: #000;
+}
+.page-template-home .social-nav li a:hover i {
+    color: #FEFF90;
 }
 
 /* --CV Page Items---------------------------------------------------------- */

@@ -18,7 +18,10 @@
 
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
-
+		
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -47,9 +50,11 @@
 
         <div class="header container">
             	
-			<?php
-				wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav page-nav'));
-				wp_nav_menu (array('theme_location' => 'social_navigation','container_class' => 'nav social-nav '));
-			?>
+			<?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav page-nav')); ?>
+
+			<ul class="nav social-nav">
+				<li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			</ul>
 
 		</div>

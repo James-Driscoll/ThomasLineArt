@@ -79,12 +79,11 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 /* --------------------------------------------------
- * Register Custom Menus
+ * Register Custom Menu
   -------------------------------------------------- */
 register_nav_menus(
   array(
     'page_navigation' => "Page Navigation Menu",
-    'social_navigation' => "Social Navigation Menu"
   )
 );
 

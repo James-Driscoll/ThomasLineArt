@@ -290,9 +290,11 @@ body.cv {
 .home-logo {
     display: inline;
 }
+.page-template-front-page .social-nav li i,
 .page-template-home .social-nav li i {
     color: #000;
 }
+.page-template-front-page .social-nav li a:hover i,
 .page-template-home .social-nav li a:hover i {
     color: #FEFF90;
 }

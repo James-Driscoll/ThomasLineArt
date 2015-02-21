@@ -158,24 +158,6 @@ function register_jdtla_work() {
   register_post_type( 'jdtla_work' , $args );
 }
 
-/*function pa_in_taxonomy($tax, $term, $_post = NULL) {
-  // if neither tax nor term are specified, return false
-  if ( !$tax || !$term ) { return FALSE; }
-  // if post parameter is given, get it, otherwise use $GLOBALS to get post
-  if ( $_post ) {
-      $_post = get_post( $_post );
-  } else {
-      $_post =& $GLOBALS['post'];
-  }
-  // if no post return false
-  if ( !$_post ) { return FALSE; }
-  // check whether post matches term belongin to tax
-  $return = is_object_in_term( $_post->ID, $tax, $term );
-  // if error returned, then return false
-  if ( is_wp_error( $return ) ) { return FALSE; }
-  return $return;
-}*/
-
 //add_action('init', 'portfolio_register');
 function create_jdtla_work_taxonomies() {
   $labels = array(

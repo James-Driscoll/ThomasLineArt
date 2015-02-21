@@ -45,15 +45,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header">
+        <div class="header container">
             	
 			<?php
-				//Output the navigation
-			  	$args = array(
-				  "theme_location" => "top_navigation",
-				  'container_class' => 'top-nav container'
-				);
-				wp_nav_menu($args);
+				wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav page-nav'));
+				wp_nav_menu (array('theme_location' => 'social_navigation','container_class' => 'nav social-nav '));
 			?>
 
 		</div>

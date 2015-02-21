@@ -1,27 +1,20 @@
 <?php
-
   error_reporting(E_ALL); //Turn on Error reporting
-
   /* Starkers Items*/
   require_once( 'external/starkers-utilities.php' );
   add_filter( 'body_class', 'add_slug_to_body_class' );
-
-
   /* --------------------------------------------------
   Location Rewriting based on the URL, including templating!
   -----------------------------------------------------*/
-
   // REWRITE RULES
   add_filter('rewrite_rules_array','wp_insertMyRewriteRules');
   add_filter('query_vars','wp_insertMyRewriteQueryVars');
   add_filter('init','flushRules');
-
   // Remember to flush_rules() when adding rules
   function flushRules(){
     global $wp_rewrite;
     $wp_rewrite->flush_rules();
   }
-
   // Adding a new rule
   function wp_insertMyRewriteRules($rules){
     $newrules = array();
@@ -30,13 +23,11 @@
     $newrules['(.?.+?)(/[0-9]+)?/('.$locations.')'] = 'index.php?pagename=$matches[1]&page=$matches[2]&placename=$matches[3]';
     return $newrules + $rules;
   }
-
   // Adding the id var so that WP recognizes it
   function wp_insertMyRewriteQueryVars($vars){
     array_push($vars, 'placename');
     return $vars;
   }
-
   //Modify buffer here, and then return the updated code
   function location_callback($buffer) {
     //{##around #location# and surrounding areas##|## or this ##}
@@ -45,7 +36,6 @@
     //Replace any instances of #location# with the actual location (based on the URL)
     $location = str_replace("-"," ",$location);
     $location = ucwords($location);
-
     //We have a location! lets remove the stuff we don't want (from the | onwards)
     $buffer = str_replace('$location',$location,$buffer);
     if (strlen($location)){
@@ -56,18 +46,14 @@
       $buffer = str_replace(array("%{","}%"),"",$buffer);
     return $buffer;
   }
-
   function buffer_start() { ob_start("location_callback"); }
   function buffer_end() { ob_end_flush(); }
-
   add_action('wp', 'buffer_start');
   add_action('wp_footer', 'buffer_end');
-
   /* -------------------------------------------------------
-  	Post Thumbnails
+    Post Thumbnails
   ------------------------------------------------------- */
   add_theme_support( 'post-thumbnails' ); 
-
   if (class_exists('MultiPostThumbnails')) {
       new MultiPostThumbnails(
           array(
@@ -78,8 +64,6 @@
           )
       );
   }
-
-
   /* --------------------------------------------------
    * Register Custom Menu
     -------------------------------------------------- */
@@ -88,17 +72,13 @@
       'top_navigation' => "Top Navigation Menu"
     )
   );
-
-
   /* -------------------------------------------------------
       Custom Post Types
   ------------------------------------------------------- */
   //hook into the init action and call create_book_taxonomies when it fires
   add_action( 'init', 'custom_post_studio');
   add_action( 'init', 'custom_post_work');
-
   function custom_post_studio() {
-
     // creating (registering) the custom type 
     register_post_type( 'jdtla_studio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
       // let's now add all the options for this post type
@@ -130,11 +110,8 @@
         'supports' => array( 'title', 'editor', 'thumbnail')
       ) /* end of options */
     ); /* end of register post type */
-
   }
-
   function custom_post_work() {
-
     // creating (registering) the custom type 
     register_post_type( 'jdtla_work', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
       // let's now add all the options for this post type
@@ -166,15 +143,12 @@
         'supports' => array( 'title', 'editor', 'thumbnail')
       ) /* end of options */
     ); /* end of register post type */
-
   } 
-
   /* --------------------------------------------------
    Custom Work Categories
   -----------------------------------------------------*/
   //hook into the init action and call create_book_taxonomies when it fires
   add_action( 'init', 'create_category_taxonomies', 0 );
-
   //create two taxonomies, genres and writers for the post type "book"
   function create_category_taxonomies()   {
     // Add new taxonomy, make it hierarchical (like categories)
@@ -191,7 +165,6 @@
       'new_item_name' => "New Category",
       'menu_name' => "Categories",
     );
-
     register_taxonomy('categories','jdtla_work', array(
       'hierarchical' => true,
       'labels' => $labels,
@@ -200,8 +173,6 @@
       'rewrite' => array( 'slug' => 'categories' ),
     ));
   }
-
-
 function pa_in_taxonomy($tax, $term, $_post = NULL) {
     // if neither tax nor term are specified, return false
     if ( !$tax || !$term ) { return FALSE; }
@@ -219,7 +190,6 @@ function pa_in_taxonomy($tax, $term, $_post = NULL) {
     if ( is_wp_error( $return ) ) { return FALSE; }
     return $return;
 }
-
   /* -------------------------------------------------------
       Make the site private
   ------------------------------------------------------- */
@@ -227,11 +197,9 @@ function pa_in_taxonomy($tax, $term, $_post = NULL) {
     $whitelist = array('127.0.0.1');
     return in_array($_SERVER['REMOTE_ADDR'], $whitelist);
   }
-
   function is_login_page() {
     return in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php'));
   }
-
   if (isset($_GET["importer"])) {
     require "importer.php";
   }

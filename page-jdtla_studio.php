@@ -22,7 +22,6 @@ get_template_parts( array( 'parts/html-header') ); ?>
 			</a>
 
 			<?php  wp_reset_postdata();
-
 		endwhile; ?>
 	</div>
 </div>

@@ -138,6 +138,9 @@ body.cv {
 }
 
 /* --Header Items----------------------------------------------------------- */
+.header {
+    padding-top: 30px;
+}
 .header .title {
     margin: 0;
     font-size: 40px;
@@ -165,14 +168,14 @@ body.cv {
     transition: all .1s ease-in;
 }
 
-/* --Top Navigation Items--------------------- */
-.top-nav ul {
+/* --Navigation Items--------------------- */
+.nav ul {
     padding-left: 0px;
 }
-.top-nav li {
+.nav li {
     display: block;
 }
-.top-nav li a {
+.nav li a {
     display: inline-block;
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
@@ -181,7 +184,7 @@ body.cv {
     height: 35px;
     line-height: 35px;
 }
-.top-nav .nav-item-1 a {
+.nav .nav-item-1 a {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -189,7 +192,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #E498CC;
 }
-.top-nav .nav-item-1 a:hover {
+.nav .nav-item-1 a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -197,7 +200,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #000;
 }
-.top-nav .nav-item-2 a {
+.nav .nav-item-2 a {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -205,7 +208,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #FEFF90;
 }
-.top-nav .nav-item-2 a:hover {
+.nav .nav-item-2 a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -213,7 +216,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #000;
 }
-.top-nav .nav-item-3 a {
+.nav .nav-item-3 a {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -221,7 +224,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #FFF;
 }
-.top-nav .nav-item-3 a:hover {
+.nav .nav-item-3 a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -229,7 +232,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #000;
 }
-.top-nav .nav-item-4 a {
+.nav .nav-item-4 a {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -237,7 +240,7 @@ body.cv {
     transition: all .1s ease-in;
     color: #90FFFD;
 }
-.top-nav .nav-item-4 a:hover {
+.nav .nav-item-4 a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
@@ -245,19 +248,29 @@ body.cv {
     transition: all .1s ease-in;
     color: #000;
 }
-.top-nav ul .current-page-ancestor:hover a,
-.top-nav ul .current-page-ancestor a,
-.top-nav ul .current-page-item:hover a,
-.top-nav ul .current-menu-item:hover a,
-.top-nav ul .current-page-item a,
-.top-nav ul .current-menu-item a,
-.single-jdtla_studio .top-nav ul .nav-item-2 a,
-.single-jdtla_work .top-nav ul .nav-item-3 a {
+.nav ul .current-page-ancestor:hover a,
+.nav ul .current-page-ancestor a,
+.nav ul .current-page-item:hover a,
+.nav ul .current-menu-item:hover a,
+.nav ul .current-page-item a,
+.nav ul .current-menu-item a,
+.single-jdtla_studio .page-nav ul .nav-item-2 a,
+.single-jdtla_work .page-nav ul .nav-item-3 a {
     color: #000;
 }
-.top-nav ul .current-menu-item:hover a {
+.nav ul .current-menu-item:hover a {
     opacity: 0.6;
 }
+/* --Page Navigation Items--------------------*/
+.page-nav {
+    float: left;
+}
+
+/* --Social Navigation Items------------------*/
+.social-nav {
+    float: right;
+}
+.social-nav {}
 
 /* --Home Page Items--------------------------------------------------------- */
 .home-logo img {

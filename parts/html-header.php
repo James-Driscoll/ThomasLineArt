@@ -15,7 +15,7 @@
 
         <!-- Google Font -->
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
+        
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 		
@@ -42,19 +42,31 @@
         
     </head>
 
-    <body <?php body_class(); ?> class="page-id-9 page-id-50 page-id-11">
+    <body <?php body_class(); ?>>
 
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header container">
-            	
-			<?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav page-nav')); ?>
+        <div class="header outer-container">
 
-			<ul class="nav social-nav">
-				<li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-				<li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			</ul>
+                <div class="logo">
+                    <a href="<?php echo get_site_url(); ?>">
+                        <img height="120" width="157" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.gif" alt="Thomas Line Art">
+                    </a>
+                </div>
 
-		</div>
+                <div class="social">
+                    <ul>
+                        <li><a href="https://instagram.com/tomline92/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/TomLine3" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://vimeo.com/thomasline" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="nav">
+                    <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
+                </div>
+            </div>
+        
+        

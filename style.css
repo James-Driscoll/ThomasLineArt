@@ -115,189 +115,134 @@ textarea {
    $ Site Items
    ========================================================================== */
 body {
-    background: #E498CC;
-    width: 100%;
+    background: #FFF
     margin: 0;
-}
-body.page-template-page-jdtla_studio-php,
-body.single-jdtla_studio {
-    background: #FEFF90;
-}
-body.page-template-page-jdtla_work-php,
-body.single-jdtla_work {
-    background: #FFF;
-}
-body.cv {
-    background: #90FFFD;
 }
 
 /* --Container Items-------------------------------------------------------- */
-.container {
-    width: 90%;
+.outer-container {
+    width: 80%;
+}
+.inner-container {
+    width: 55%;
     margin: 0px auto;
+    background:green;
+    height: 2000px;
 }
 
-/* --Header Items----------------------------------------------------------- */
+/* -- Header Items ----------------------------------------------------------- */
 .header {
-    padding-top: 30px;
-}
-.header .title {
-    margin: 0;
-    font-size: 40px;
-}
-.header .title a {
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    font-weight: normal;
-    text-decoration: none;
-    color: #87D4B4;
-    background: #FEFF90;
-    padding: 10px;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-}
-.header .title a:hover {
-    background: #87D4B4;
-    color: #E494CB;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
-/* --Navigation Items--------------------- */
-.nav ul {
-    padding-left: 0px;
-}
-.nav li {
-    display: block;
-}
-.page-nav li a {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-    font-size: 30px;
-    width: 220px;
-    height: 35px;
-    line-height: 35px;
-}
-.nav .nav-item-1 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #E498CC;
-}
-.nav .nav-item-1 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
-}
-.nav .nav-item-2 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #FEFF90;
-}
-.nav .nav-item-2 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
-}
-.nav .nav-item-3 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #FFF;
-}
-.nav .nav-item-3 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
-}
-.nav .nav-item-4 a {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #90FFFD;
-}
-.nav .nav-item-4 a:hover {
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -ms-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-    color: #000;
-}
-.nav ul .current-page-ancestor:hover a,
-.nav ul .current-page-ancestor a,
-.nav ul .current-page-item:hover a,
-.nav ul .current-menu-item:hover a,
-.nav ul .current-page-item a,
-.nav ul .current-menu-item a,
-.single-jdtla_studio .page-nav ul .nav-item-2 a,
-.single-jdtla_work .page-nav ul .nav-item-3 a {
-    color: #000;
-}
-.nav ul .current-menu-item:hover a {
-    opacity: 0.6;
-}
-/* --Page Navigation Items--------------------*/
-.page-nav {
+/* -- Logo --------------------------*/
+.header .logo {
     float: left;
+    -moz-transition: all.3s;
+    -o-transition: all.3s;
+    -ms-transition: all.3s;
+    -webkit-transition: all.3s;
+    transition: all.3s;
+}
+.header .logo:hover {
+    opacity: 0.7;
+    -moz-transition: all.3s;
+    -o-transition: all.3s;
+    -ms-transition: all.3s;
+    -webkit-transition: all.3s;
+    transition: all.3s;
 }
 
-/* --Social Navigation Items------------------*/
-.social-nav {
+/* -- Social --------------------------*/
+.header .social {
     float: right;
 }
-.social-nav li i {
-    font-size: 60px;
-    color: #E498CC;
+.header .social ul {
+    list-style: none;
 }
-.social-nav li a:hover {
-    background: none;
+.header .social ul li {
+    padding-bottom: 10px;
 }
-.social-nav li a:hover i {
+.header .social li a i {
+    font-size: 35px;
+    color: #000;
+    -moz-transition: all.3s;
+    -o-transition: all.3s;
+    -ms-transition: all.3s;
+    -webkit-transition: all.3s;
+    transition: all.3s;
+}
+.header .social li a i:hover {
+    color: #C7C3C3;
+    -moz-transition: all.3s;
+    -o-transition: all.3s;
+    -ms-transition: all.3s;
+    -webkit-transition: all.3s;
+    transition: all.3s;
+}
+
+/* -- Navigation ----------------------*/
+.header .nav {
+    clear: both;
+}
+.header .nav ul {
+    padding-left: 0px;
+}
+.header .nav ul li {
+    display: block;
+}
+.header .nav a {
+    text-decoration: none;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+    font-size: 26px;
+    line-height: 35px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.header .nav a:hover {
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -ms-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.header .nav ul .current-page-ancestor:hover a,
+.header .nav ul .current-page-ancestor a,
+.header .nav ul .current-page-item:hover a,
+.header .nav ul .current-menu-item:hover a,
+.header .nav ul .current-page-item a,
+.header .nav ul .current-menu-item a, {
+    color: #000;
+}
+.header .nav ul .current-menu-item a {
+    padding-left: 10px;
+}
+.header .nav .break {
+    margin-top: 30px;
+}
+.header .nav .shade-1 a {
+    color: #000;
+}
+.header .nav .shade-1 a:hover {
+    color: #C7C3C3;
+}
+.header .nav .shade-2 a {
+    color: #C7C3C3;
+}
+.header .nav .shade-2 a:hover {
     color: #000;
 }
 
-/* --Home Page Items--------------------------------------------------------- */
-.home-logo img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.home-logo {
-    display: inline;
-}
-.page-template-front-page .social-nav li i,
-.page-template-home .social-nav li i {
-    color: #000;
-}
-.page-template-front-page .social-nav li a:hover i,
-.page-template-home .social-nav li a:hover i {
-    color: #FEFF90;
-}
+
+
+
+
 
 /* --CV Page Items---------------------------------------------------------- */
 .cv .description {

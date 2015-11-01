@@ -1,6 +1,6 @@
     <!-- Footer begins here -->
     <div class="container footer">
-        <a class="col-md-4 email text-left" href="mailto:enquiries@thomasline.uk" target="_blank">enquiries@thomasline.uk</a>
+        <a class="col-md-4 email text-left" href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a>
         <a class="col-md-4 developer text-center" href="http://jamesdriscoll.london" target="_blank">Wordpress theme developed by James Driscoll</a>
         <div class="col-md-4 copy text-right">Copyright Thomas Line</div>
     </div>

@@ -25,8 +25,8 @@ function flushRules(){
 function wp_insertMyRewriteRules($rules){
   $newrules = array();
   //If the URL matches any of the locations, do an internal re-write.
-  $locations = require("locations.php");
-  $newrules['(.?.+?)(/[0-9]+)?/('.$locations.')'] = 'index.php?pagename=$matches[1]&page=$matches[2]&placename=$matches[3]';
+  //$locations = require("locations.php");
+  //$newrules['(.?.+?)(/[0-9]+)?/('.$locations.')'] = 'index.php?pagename=$matches[1]&page=$matches[2]&placename=$matches[3]';
   return $newrules + $rules;
 }
 
@@ -40,7 +40,7 @@ function wp_insertMyRewriteQueryVars($vars){
 function location_callback($buffer) {
   //{##around #location# and surrounding areas##|## or this ##}
   $location = get_query_var("placename");
-  
+
   //Replace any instances of #location# with the actual location (based on the URL)
   $location = str_replace("-"," ",$location);
   $location = ucwords($location);
@@ -65,7 +65,7 @@ add_action('wp_footer', 'buffer_end');
 /* -------------------------------------------------------
   Post Thumbnails
 ------------------------------------------------------- */
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 
 if (class_exists('MultiPostThumbnails')) {
     new MultiPostThumbnails(
@@ -73,7 +73,7 @@ if (class_exists('MultiPostThumbnails')) {
             'label' => 'Secondary Image',
             'id' => 'secondary-image',
             'post_type' => 'jdtla_studio'
-            
+
         )
     );
 }
@@ -106,8 +106,8 @@ function register_jdtla_studio() {
       'edit_item' => __('Edit Studio'), /* Edit Display Title */
       'new_item' => __('New Studio'), /* New Display Title */
       'view_item' => __('View Studios'), /* View Display Title */
-      'search_items' => __('Search Studios'), /* Search Custom Type Title */ 
-      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */ 
+      'search_items' => __('Search Studios'), /* Search Custom Type Title */
+      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
       ), /* end of arrays */
@@ -117,7 +117,7 @@ function register_jdtla_studio() {
       'exclude_from_search' => false,
       'show_ui' => true,
       'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */ 
+      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
       'rewrite' => true,
       'capability_type' => 'post',
       'hierarchical' => false,
@@ -128,7 +128,7 @@ function register_jdtla_studio() {
 }
 
 function register_jdtla_work() {
-  
+
   $labels = array(
       'name' => _x('Work', 'post type general name'),
       'singular_name' => _x('Work Item', 'post type singular name'),

@@ -2,12 +2,12 @@
 Theme Name: 	Thomas Line Art
 Theme URI: 		http://www.art.thomasline.uk
 Description: 	Thomas Line Art
-Version: 		1.0
-Author: 		James Driscoll
+Version: 		  1.0
+Author: 		  James Driscoll
 Author URI: 	http://www.jamesdriscoll.london
 Tags:
 */
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ 
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
 
    --Colours--
    ==============================================
@@ -121,35 +121,38 @@ body {
 
 /* --Container Items-------------------------------------------------------- */
 .outer-container {
-    width: 80%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.inner-container {
-    width: 55%;
-    margin: 0 auto;
-    min-height: 500px;
-    padding-top: 150px;
-    z-index: 50;
+.all {
+  float: left;
+}
+.side {
+  width: 20%;
+  min-width: 100px;
+}
+.centre {
+  width: 60%;
 }
 
 /* -- Header Items ----------------------------------------------------------- */
-.header {
-    position: fixed;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
+
 
 /* -- Logo --------------------------*/
-.header .logo {
-    float: left;
-    -moz-transition: all.3s;
-    -o-transition: all.3s;
-    -ms-transition: all.3s;
-    -webkit-transition: all.3s;
-    transition: all.3s;
-    z-index: 100;
+.logoWrapper {
+    height: 200px;
+    position: relative;
 }
-.header .logo:hover {
+.logoWrapper .logo {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.logoWrapper .logo:hover {
     opacity: 0.7;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -159,19 +162,23 @@ body {
 }
 
 /* -- Social --------------------------*/
-.header .social {
-    float: right;
-    margin-top: 44px;
-    z-index: 100;
-}
-.header .social ul {
+.right-side .social {
+    padding: 0;
     list-style: none;
+    height: 200px;
+    line-height: 200px;
 }
-.header .social ul li {
-    display: inline;
-    padding-left: 30px;
+.right-side .social ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
-.header .social li a i {
+.right-side .social li {
+    display: block;
+    margin: 0 5 0 5;
+    display:inline-block;
+}
+.right-side .social li a i {
     font-size: 35px;
     color: #000;
     -moz-transition: all.3s;
@@ -180,7 +187,7 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.header .social li a i:hover {
+.right-side .social li a i:hover {
     color: #C7C3C3;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -190,18 +197,18 @@ body {
 }
 
 /* -- Navigation ----------------------*/
-.header .nav {
+ .nav {
     clear: both;
     margin-top: 30px;
-    z-index: 100;
+    margin-left: 40px;
 }
-.header .nav ul {
+ .nav ul {
     padding-left: 0px;
 }
-.header .nav ul li {
+ .nav ul li {
     display: block;
 }
-.header .nav a {
+ .nav a {
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-size: 26px;
@@ -212,46 +219,54 @@ body {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-.header .nav a:hover {
+ .nav a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-.header .nav ul .current-page-ancestor:hover a,
-.header .nav ul .current-page-ancestor a,
-.header .nav ul .current-page-item:hover a,
-.header .nav ul .current-menu-item:hover a,
-.header .nav ul .current-page-item a,
-.header .nav ul .current-menu-item a, {
+ .nav ul .current-page-ancestor:hover a,
+ .nav ul .current-page-ancestor a,
+ .nav ul .current-page-item:hover a,
+ .nav ul .current-menu-item:hover a,
+ .nav ul .current-page-item a,
+ .nav ul .current-menu-item a, {
     color: #000;
 }
-.header .nav ul .current-menu-item a {
+ .nav ul .current-menu-item a {
     font-weight: bold;
 }
-.header .nav .break {
+ .nav .break {
     margin-top: 30px;
 }
-.header .nav .shade-1 a {
+ .nav .shade-1 a {
     color: #000;
 }
-.header .nav .shade-1 a:hover {
+ .nav .shade-1 a:hover {
     color: #C7C3C3;
 }
-.header .nav .shade-2 a {
+ .nav .shade-2 a {
     color: #C7C3C3;
 }
-.header .nav .shade-2 a:hover {
+ .nav .shade-2 a:hover {
     color: #000;
 }
 
 
-
-.vimeo iframe {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+    margin-top: 170px;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 

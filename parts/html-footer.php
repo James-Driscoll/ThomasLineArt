@@ -1,10 +1,10 @@
-    <!-- Footer begins here -->
+    <!-- Footer begins here 
     <div class="container footer">
         <a class="col-md-4 email text-left" href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a>
         <a class="col-md-4 developer text-center" href="http://jamesdriscoll.london" target="_blank">Wordpress theme developed by James Driscoll</a>
         <div class="col-md-4 copy text-right">Copyright Thomas Line</div>
     </div>
-    <!-- Footer ends here -->  
+    <!-- Footer ends here -->
 
     <!-- BxSlider -->
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
@@ -18,7 +18,7 @@
 
     <!-- Custom JS -->
     <script src="<?php echo get_stylesheet_directory_uri();?>/js/site.js"></script>
-    
+
     <script type="text/javascript">
       if (0)
       {
@@ -34,7 +34,7 @@
         })();
       }
     </script>
-      
+
     <?php wp_footer(); ?>
   </body>
 </html>

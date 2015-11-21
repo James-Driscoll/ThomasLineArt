@@ -24,11 +24,8 @@
 
       <div class="logoWrapper">
         <a href="<?php echo get_site_url(); ?>">
-          <img class="logo "height="120" width="157" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Thomas Line Art">
+          <img class="logo "height="152" width="200" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-medium.png" alt="Thomas Line Art">
         </a>
-
-
-
 
 
 

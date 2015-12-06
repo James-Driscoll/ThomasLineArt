@@ -125,6 +125,7 @@ body {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 
 }
 .all {
   float: left;
@@ -134,7 +135,7 @@ body {
   min-width: 100px;
 }
 .centre {
-  width: 60%;
+  width: 80%;
 }
 
 /* -- Header Items ----------------------------------------------------------- */
@@ -163,23 +164,23 @@ body {
 }
 
 /* -- Social --------------------------*/
-.right-side .social {
+.left-side .social {
     padding: 0;
     list-style: none;
     height: 200px;
     line-height: 200px;
 }
-.right-side .social ul {
+.left-side .social ul {
     padding: 0;
     margin: 0;
     text-align: center;
 }
-.right-side .social li {
+.left-side .social li {
     display: block;
     margin: 0 5 0 5;
     display:inline-block;
 }
-.right-side .social li a i {
+.left-side .social li a i {
     font-size: 35px;
     color: #000;
     -moz-transition: all.3s;
@@ -188,7 +189,7 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.right-side .social li a i:hover {
+.left-side .social li a i:hover {
     color: #C7C3C3;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -212,6 +213,8 @@ body {
  .nav a {
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
+    font-weight: 300;
+    font-style: light;
     font-size: 26px;
     line-height: 35px;
     -moz-transition: all .1s ease-in;
@@ -236,7 +239,7 @@ body {
     color: #000;
 }
  .nav ul .current-menu-item a {
-    font-weight: bold;
+    font-weight: normal;
 }
  .nav .break {
     margin-top: 30px;
@@ -260,7 +263,6 @@ body {
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
-    margin-top: 170px;
 }
 .videoWrapper iframe {
 	position: absolute;

@@ -116,7 +116,7 @@ textarea {
    ========================================================================== */
 body {
     background: #FFF;
-    margin-top: 100;
+    margin-top: 10%;
 }
 
 /* --Container Items-------------------------------------------------------- */
@@ -127,34 +127,25 @@ body {
     margin-right: auto;
     font-family: 
 }
-.all {
-  float: left;
+.left-side {
+    float: left;
+    position: fixed;
+    width: 20%;
 }
-.side {
-  width: 20%;
-  min-width: 100px;
-}
-.centre {
-  width: 80%;
+.right-side {
+    float: right;
+    width: 80%;
 }
 
 /* -- Header Items ----------------------------------------------------------- */
 
 
 /* -- Logo --------------------------*/
-.logoWrapper {
-    height: 200px;
-    position: relative;
+
+.logo {
+    margin-left: 20%;
 }
-.logoWrapper .logo {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-.logoWrapper .logo:hover {
+.logo:hover {
     opacity: 0.7;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -169,19 +160,19 @@ body {
     list-style: none;
     height: 200px;
     line-height: 200px;
+    margin-left: 20%;
 }
 .left-side .social ul {
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 .left-side .social li {
     display: block;
-    margin: 0 5 0 5;
+    margin: 0 0 0 5;
     display:inline-block;
 }
 .left-side .social li a i {
-    font-size: 35px;
+    font-size: 26px;
     color: #000;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -198,24 +189,23 @@ body {
     transition: all.3s;
 }
 
-/* -- Navigation ----------------------*/
- .nav {
+/* -- navigation ----------------------*/
+ .navWrapper {
     clear: both;
     margin-top: 30px;
-    margin-left: 10%
+    margin-left: 20%
 }
- .nav ul {
+ .navWrapper ul {
     padding-left: 0px;
 }
- .nav ul li {
+ .navWrapper ul li {
     display: block;
 }
- .nav a {
+ .navWrapper a {
     text-decoration: none;
     font-family: 'Lato', 'Helvetica', 'Arial';
     font-weight: 300;
-    font-style: light;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 35px;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
@@ -223,37 +213,37 @@ body {
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
- .nav a:hover {
+ .navWrapper a:hover {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     -ms-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
- .nav ul .current-page-ancestor:hover a,
- .nav ul .current-page-ancestor a,
- .nav ul .current-page-item:hover a,
- .nav ul .current-menu-item:hover a,
- .nav ul .current-page-item a,
- .nav ul .current-menu-item a, {
+ .navWrapper ul .current-page-ancestor:hover a,
+ .navWrapper ul .current-page-ancestor a,
+ .navWrapper ul .current-page-item:hover a,
+ .navWrapper ul .current-menu-item:hover a,
+ .navWrapper ul .current-page-item a,
+ .navWrapper ul .current-menu-item a, {
     color: #000;
 }
- .nav ul .current-menu-item a {
+ .navWrapper ul .current-menu-item a {
     font-weight: normal;
 }
- .nav .break {
+ .navWrapper .break {
     margin-top: 30px;
 }
- .nav .shade-1 a {
+ .navWrapper .shade-1 a {
     color: #000;
 }
- .nav .shade-1 a:hover {
+ .navWrapper .shade-1 a:hover {
     color: #C7C3C3;
 }
- .nav .shade-2 a {
+ .navWrapper .shade-2 a {
     color: #C7C3C3;
 }
- .nav .shade-2 a:hover {
+ .navWrapper .shade-2 a:hover {
     color: #000;
 }
 

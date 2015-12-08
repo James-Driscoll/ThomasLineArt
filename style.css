@@ -265,7 +265,7 @@ body {
 }
 .left-side .social li {
     display: block;
-    margin: 0 0 0 5;
+    margin: 0px 0px 0px 5px;
     display:inline-block;
 }
 .left-side .social li a i {
@@ -287,15 +287,32 @@ body {
 }
 
 
-
-
-/* --CV Page Items---------------------------------------------------------- */
-.cv .description {
+/* -- CV Page Items --------------------------------------------------------- */
+.page-cv .description {
     font-size: 14px;
     color: #000;
     font-weight: normal;
     font-family: 'Lato', 'Helvetica', 'Arial';
 }
+
+
+/* -- About Page Items ------------------------------------------------------ */
+.page-about .description {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+}
+
+
+/* -- Contact Page Items ---------------------------------------------------- */
+.page-contact .description {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+}
+
 
 /* --Custom Post Items------------------------------------------------------- */
 /* --Page Items-------------------------------*/

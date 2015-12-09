@@ -19,7 +19,7 @@
 
     <div class="embed-responsive embed-responsive-16by9">
       <a href="https://vimeo.com/thomasline" target="_blank">
-        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/146631709?title=0&byline=0&portrait=0" width="700" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/146631709" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </a>
     </div>
 

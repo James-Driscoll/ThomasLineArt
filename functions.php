@@ -72,7 +72,7 @@ if (class_exists('MultiPostThumbnails')) {
         array(
             'label' => 'Secondary Image',
             'id' => 'secondary-image',
-            'post_type' => 'jdtla_studio'
+            'post_type' => 'jdtla_video'
 
         )
     );
@@ -91,27 +91,27 @@ register_nav_menus(
     Custom Post Types
 ------------------------------------------------------- */
 //hook into the init action and call create_book_taxonomies when it fires
-add_action('init', 'register_jdtla_studio');
+add_action('init', 'register_jdtla_video');
 add_action('init', 'register_jdtla_work');
 add_action('init', 'create_jdtla_work_taxonomies', 0 );
 
-function register_jdtla_studio() {
-  register_post_type( 'jdtla_studio',
+function register_jdtla_video() {
+  register_post_type( 'jdtla_video',
     array('labels' => array(
-      'name' => __('Studios', 'post type general name'), /* The Title of the Group */
+      'name' => __('Videos', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
       'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Studio'), /* Add New Display Title */
+      'add_new_item' => __('Add New Video'), /* Add New Display Title */
       'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Studio'), /* Edit Display Title */
-      'new_item' => __('New Studio'), /* New Display Title */
-      'view_item' => __('View Studios'), /* View Display Title */
-      'search_items' => __('Search Studios'), /* Search Custom Type Title */
+      'edit_item' => __('Edit Video'), /* Edit Display Title */
+      'new_item' => __('New Video'), /* New Display Title */
+      'view_item' => __('View Videos'), /* View Display Title */
+      'search_items' => __('Search Videos'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
       ), /* end of arrays */
-      'description' => __( 'This is the Studio custom post type.' ), /* Custom Type Description */
+      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
       'public' => true,
       'publicly_queryable' => true,
       'exclude_from_search' => false,

@@ -313,6 +313,25 @@ body {
     font-family: 'Lato', 'Helvetica', 'Arial';
 }
 
+/* -- Video Page Items ------------------------------------------------------ */
+.video-page {
+    font-size: 16px;
+    font-family: font-family: 'Lato', 'Helvetica', 'Arial';
+}
+.video {
+    margin-bottom: 100px;
+}
+.video .camera {
+    font-style: italic;
+    font-size: 14px;
+}
+.video .synopsis-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.video .video_details {
+    padding: 10px;
+}
 
 /* --Custom Post Items------------------------------------------------------- */
 /* --Page Items-------------------------------*/

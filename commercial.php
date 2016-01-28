@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: CV
+ * Template Name: Commercial
  *
  * @package 	WordPress
  * @subpackage 	Starkers
@@ -14,7 +14,7 @@ get_template_parts( array( 'parts/html-header') );
 
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<div class="content page-cv">
+<div class="content page-commercial">
    	<h2 class="description"><?php echo the_content(); ?></h2>
 </div>
 

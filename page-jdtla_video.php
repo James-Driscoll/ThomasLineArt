@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Template Name: Video
+ * Template Name: Video Art
  *
  * @package WordPress
  * @subpackage ThomasLineArt

@@ -320,13 +320,17 @@ body {
 .video {
     margin-bottom: 100px;
 }
-.video .camera {
+.video .video_camera {
     font-style: italic;
     font-size: 14px;
 }
-.video .synopsis-title {
+.video .video_synopsis-title {
     font-size: 16px;
     font-weight: bold;
+}
+.video .video_tags {
+    color: #C7C3C3;
+    display: block;
 }
 .video .video_details {
     padding: 10px;

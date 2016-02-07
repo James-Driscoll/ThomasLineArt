@@ -12,18 +12,12 @@
 
 <body <?php body_class(); ?> id="body-background">
 
-  <?php
-  //Get the Header
-  get_template_parts( array( 'parts/html-header') );
-  ?>
+<?php get_template_parts( array( 'parts/html-header') ); ?>
 
-    <div class="embed-responsive embed-responsive-16by9">
-      <a href="https://vimeo.com/thomasline" target="_blank">
+<div class="embed-responsive embed-responsive-16by9 container">
+    <a href="https://vimeo.com/thomasline" target="_blank">
         <iframe src="https://player.vimeo.com/video/146631709" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </a>
-    </div>
+    </a>
+</div>
 
-  <?php
-  //Get the Footer
-  get_template_parts( array( 'parts/html-footer') );
-  ?>
+<?php get_template_parts( array( 'parts/html-footer') ); ?>

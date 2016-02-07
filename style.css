@@ -114,52 +114,65 @@ textarea {
 /* ==========================================================================
    $ Site Items
    ========================================================================== */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
     background: #FFF;
-    margin-top: 10%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pageWrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* -- Container Items-------------------------------------------------------- */
 .container {
-    width: 100%;
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
-.left-side {
+.menuWrapper {
     float: left;
     position: fixed;
     width: 20%;
     padding-left: 4%;
+    margin-top: 100px;
 }
-.right-side {
+.contentWrapper {
     float: right;
     width: 80%;
     padding-right: 15%;
+    margin-top: 100px;
 }
 @media screen and (max-width: 1200px) {
-    .right-side {
+    .contentWrapper {
         padding-right: 10%;
     }
 }
 @media screen and (max-width: 800px) {
-    .right-side {
+    .contentWrapper {
         padding-right: 1%;
         width: 75%;
     }
-    .left-side {
+    .menuWrapper {
         padding-left: 1%;
         width: 25%;
     }
 }
 @media screen and (max-width: 600px) {
-    .right-side {
+    .contentWrapper {
         padding: 0;
         width: 100%;
         float: left;
         clear: both;
     }
-    .left-side {
+    .menuWrapper {
         padding: 0;
         width: 100%;
         float: left;
@@ -176,7 +189,7 @@ body {
     }
 }
 
-/* -- Left-Side Items ------------------------------------------------------- */
+/* -- menu Items ------------------------------------------------------- */
 /* -- Logo --------------------------*/
 .logo {
     -moz-transition: all.3s;
@@ -253,22 +266,22 @@ body {
 }
 
 /* -- Social ------------------------*/
-.left-side .social {
+.menuWrapper .social {
     padding: 0;
     list-style: none;
     height: 200px;
     line-height: 200px;
 }
-.left-side .social ul {
+.menuWrapper .social ul {
     padding: 0;
     margin: 0;
 }
-.left-side .social li {
+.menuWrapper .social li {
     display: block;
     margin: 0px 0px 0px 5px;
     display:inline-block;
 }
-.left-side .social li a i {
+.menuWrapper .social li a i {
     font-size: 26px;
     color: #000;
     -moz-transition: all.3s;
@@ -277,7 +290,7 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.left-side .social li a i:hover {
+.menuWrapper .social li a i:hover {
     color: #C7C3C3;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -285,33 +298,19 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
+.menuWrapper .social li a .fa-facebook {
+    font-size: 24px;
+}
 
 
-/* -- CV Page Items --------------------------------------------------------- */
-.page-cv .description {
+/* -- Page Items ------------------------------------------------------------ */
+.content .description {
     font-size: 14px;
     color: #000;
     font-weight: normal;
     font-family: 'Lato', 'Helvetica', 'Arial';
 }
 
-
-/* -- About Page Items ------------------------------------------------------ */
-.page-about .description {
-    font-size: 14px;
-    color: #000;
-    font-weight: normal;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-}
-
-
-/* -- Contact Page Items ---------------------------------------------------- */
-.page-contact .description {
-    font-size: 14px;
-    color: #000;
-    font-weight: normal;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-}
 
 /* -- Video Page Items ------------------------------------------------------ */
 .video-page {
@@ -404,18 +403,25 @@ a.item:hover {
 /* --Footer Items------------------------------------------------------------ */
 .footer {
     clear: both;
-    height: 50px;
-    margin-top: 100px;
-}
-.footer div {
+    position: relative;
+    z-index: 10;
+    background: #000;
+    height: 100px;
+    margin-top: -100px;
     font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #000;
+    color: #C7C3C3;
     font-size: 15px;
     font-weight: normal;
+    line-height: 100px;
+}
+.footer .container-full {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer a {
     text-decoration: none;
-    color: #000;
+    color: #C7C3C3;
     padding: 0;
 }
 .footer a:hover {

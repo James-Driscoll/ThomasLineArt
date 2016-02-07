@@ -20,7 +20,7 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
 		<!-- Font Awesome Icons -->
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -48,29 +48,27 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-		<div class="container">
+		<div class="pageWrapper">
 
-			<div class="left-side">
+			<div class="menuWrapper">
+				<div class="logo">
+					<a href="<?php echo get_site_url(); ?>">
+				  		<img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-smaller.png" alt="Thomas Line Art">
+					</a>
+				</div>
 
-		      <div class="logo">
-		        <a href="<?php echo get_site_url(); ?>">
-		          <img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-smaller.png" alt="Thomas Line Art">
-		        </a>
-		      </div>
+				<div class="navWrapper">
+				  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
+				</div>
 
-		      <div class="navWrapper">
-		        <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
-		      </div>
-
-		      <div class="social">
-		        <ul>
-		          <li><a href="https://instagram.com/tomline92/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-		          <li><a href="https://twitter.com/TomLine3" target="_blank"><i class="fa fa-twitter"></i></a></li>
-		          <li><a href="https://vimeo.com/thomasline" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-		          <li><a href="https://www.facebook.com/ThomasLineFilmmaker" target="_blank"><i class="fa fa-facebook"></i></a></li>
-		        </ul>
-		      </div>
-
+				<div class="social">
+					<ul>
+						<li><a href="https://instagram.com/tomline92/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://twitter.com/TomLine3" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://vimeo.com/thomasline" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+						<li><a href="https://www.facebook.com/ThomasLineFilmmaker" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					</ul>
+				</div>
 		    </div>
 
-			<div class="right-side">
+			<div class="contentWrapper">

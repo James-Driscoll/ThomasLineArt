@@ -92,7 +92,6 @@ register_nav_menus(
 ------------------------------------------------------- */
 //hook into the init action and call create_book_taxonomies when it fires
 add_action('init', 'register_jdtla_video');
-
 function register_jdtla_video() {
   register_post_type( 'jdtla_video',
     array('labels' => array(
@@ -124,6 +123,73 @@ function register_jdtla_video() {
     ) /* end of options */
   ); /* end of register post type */
 }
+
+add_action('init', 'register_jdtla_commercial');
+function register_jdtla_commercial() {
+  register_post_type( 'jdtla_commercial',
+    array('labels' => array(
+      'name' => __('Commercial Videos', 'post type general name'), /* The Title of the Group */
+      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+      'add_new_item' => __('Add New Video'), /* Add New Display Title */
+      'edit' => __( 'Edit' ), /* Edit Dialog */
+      'edit_item' => __('Edit Video'), /* Edit Display Title */
+      'new_item' => __('New Commercial Video'), /* New Display Title */
+      'view_item' => __('View Commercial Videos'), /* View Display Title */
+      'search_items' => __('Search Commercial Videos'), /* Search Custom Type Title */
+      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
+      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+      'parent_item_colon' => ''
+      ), /* end of arrays */
+      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
+      'public' => true,
+      'publicly_queryable' => true,
+      'exclude_from_search' => false,
+      'show_ui' => true,
+      'query_var' => true,
+      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
+      'rewrite' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      /* the next one is important, it tells what's enabled in the post editor */
+      'supports' => array( 'title', 'editor', 'thumbnail')
+    ) /* end of options */
+  ); /* end of register post type */
+}
+
+add_action('init', 'register_jdtla_narrative');
+function register_jdtla_narrative() {
+  register_post_type( 'jdtla_narrative',
+    array('labels' => array(
+      'name' => __('Narrative Videos', 'post type general name'), /* The Title of the Group */
+      'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
+      'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
+      'add_new_item' => __('Add New Video'), /* Add New Display Title */
+      'edit' => __( 'Edit' ), /* Edit Dialog */
+      'edit_item' => __('Edit Video'), /* Edit Display Title */
+      'new_item' => __('New Narrative Video'), /* New Display Title */
+      'view_item' => __('View Narrative Videos'), /* View Display Title */
+      'search_items' => __('Search Narrative Videos'), /* Search Custom Type Title */
+      'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
+      'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
+      'parent_item_colon' => ''
+      ), /* end of arrays */
+      'description' => __( 'This is the Video custom post type.' ), /* Custom Type Description */
+      'public' => true,
+      'publicly_queryable' => true,
+      'exclude_from_search' => false,
+      'show_ui' => true,
+      'query_var' => true,
+      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
+      'rewrite' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      /* the next one is important, it tells what's enabled in the post editor */
+      'supports' => array( 'title', 'editor', 'thumbnail')
+    ) /* end of options */
+  ); /* end of register post type */
+}
+
 
 
 /* -------------------------------------------------------

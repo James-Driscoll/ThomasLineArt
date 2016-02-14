@@ -13,15 +13,8 @@ Tags:
    ==============================================
 *  Black: #000;
 *  White: #FFF;
-*  Pink: #E498CC;
-*  Turquise: #90FFFD;,
-*  Yellow: #FEFF90;
+*  Grey:  #;
    ==============================================
-
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 
 html,
 button,
@@ -133,7 +126,7 @@ body {
 
 /* -- Container Items-------------------------------------------------------- */
 .container {
-    max-width: 1800px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -151,28 +144,33 @@ body {
     margin-top: 100px;
 }
 @media screen and (max-width: 1200px) {
+    #vim_vid {
+        height: 480px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #vim_vid {
+        height: 360px;
+    }
+}
+@media screen and (max-width: 900px) {
     .contentWrapper {
-        padding-right: 10%;
+        padding-right: 4%;
+        width: 75%;
     }
 }
 @media screen and (max-width: 800px) {
-    .contentWrapper {
-        padding-right: 1%;
-        width: 75%;
-    }
-    .menuWrapper {
-        padding-left: 1%;
-        width: 25%;
-    }
-}
-@media screen and (max-width: 600px) {
     .contentWrapper {
         padding: 0;
         width: 100%;
         float: left;
         clear: both;
+        margin: 0;
+        margin-bottom: 100px;
     }
     .menuWrapper {
+        height: 100%;
+        margin: 0;
         padding: 0;
         width: 100%;
         float: left;
@@ -183,22 +181,43 @@ body {
     }
     .logo {
         text-align: center;
+        margin-top: 100px;
     }
     .social {
         text-align: center;
+    }
+    div.footer {
+        height: 234px;
+        margin-top: -234px;
+    }
+    div.footer ul li {
+        display: block;
+        text-align: center;
+        line-height: normal;
+        padding: 30px 0px 30px 0px;
+        width: 100%;
+    }
+    #vim_vid {
+        height: 420px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    #vim_vid {
+        height: 320px;
     }
 }
 
 /* -- menu Items ------------------------------------------------------- */
 /* -- Logo --------------------------*/
-.logo {
+.logo img {
     -moz-transition: all.3s;
     -o-transition: all.3s;
     -ms-transition: all.3s;
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.logo:hover {
+.logo img:hover {
     opacity: 0.7;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -315,7 +334,7 @@ body {
 /* -- Video Page Items ------------------------------------------------------ */
 .video-page {
     font-size: 16px;
-    font-family: font-family: 'Lato', 'Helvetica', 'Arial';
+    font-family: 'Lato', 'Helvetica', 'Arial';
 }
 .video {
     margin-bottom: 100px;
@@ -431,6 +450,16 @@ a.item:hover {
 .footer a:hover {
     text-decoration: underline;
     opacity: 0.7;
+}
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer ul li {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
 }
 
 /* ==========================================================================

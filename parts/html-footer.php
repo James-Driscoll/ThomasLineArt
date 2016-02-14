@@ -3,11 +3,11 @@
 
         <!-- Footer begins here -->
         <div class="footer">
-            <div class="container-full">
-                <a class="col-md-4 email text-left" href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a>
-                <a class="col-md-4 developer text-center" href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a>
-                <div class="col-md-4 copy text-right">copyright &copy; Thomas Line 2016</div>
-            </div>
+            <ul class="container-full">
+                <li class="email text-left"><a href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a></li>
+                <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
+                <li class="copy text-right"><span>copyright &copy; Thomas Line 2016</span></li>
+            </ul>
         </div>
         <!-- Footer ends here -->
 

@@ -53,7 +53,7 @@
 			<div class="menuWrapper">
 				<div class="logo">
 					<a href="<?php echo get_site_url(); ?>">
-				  		<img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo-smaller.png" alt="Thomas Line Art">
+				  		<img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Thomas Line Art">
 					</a>
 				</div>
 

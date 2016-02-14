@@ -72,7 +72,7 @@ if (class_exists('MultiPostThumbnails')) {
         array(
             'label' => 'Secondary Image',
             'id' => 'secondary-image',
-            'post_type' => 'jdtla_video'
+            'post_type' => 'jdtl_video'
 
         )
     );
@@ -90,20 +90,19 @@ register_nav_menus(
 /* -------------------------------------------------------
     Custom Post Types
 ------------------------------------------------------- */
-//hook into the init action and call create_book_taxonomies when it fires
-add_action('init', 'register_jdtla_video');
-function register_jdtla_video() {
-  register_post_type( 'jdtla_video',
+add_action('init', 'register_jdtl_narrative');
+function register_jdtl_narrative() {
+  register_post_type( 'jdtl_narrative',
     array('labels' => array(
-      'name' => __('Videos', 'post type general name'), /* The Title of the Group */
+      'name' => __('Narrative Video', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
       'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
       'add_new_item' => __('Add New Video'), /* Add New Display Title */
       'edit' => __( 'Edit' ), /* Edit Dialog */
       'edit_item' => __('Edit Video'), /* Edit Display Title */
-      'new_item' => __('New Video'), /* New Display Title */
-      'view_item' => __('View Videos'), /* View Display Title */
-      'search_items' => __('Search Videos'), /* Search Custom Type Title */
+      'new_item' => __('New Narrative Video'), /* New Display Title */
+      'view_item' => __('View Narrative Videos'), /* View Display Title */
+      'search_items' => __('Search Narrative Videos'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
@@ -114,7 +113,7 @@ function register_jdtla_video() {
       'exclude_from_search' => false,
       'show_ui' => true,
       'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
+      'menu_position' => 6, /* this is what order you want it to appear in on the left hand side menu */
       'rewrite' => true,
       'capability_type' => 'post',
       'hierarchical' => false,
@@ -124,11 +123,11 @@ function register_jdtla_video() {
   ); /* end of register post type */
 }
 
-add_action('init', 'register_jdtla_commercial');
-function register_jdtla_commercial() {
-  register_post_type( 'jdtla_commercial',
+add_action('init', 'register_jdtl_commercial');
+function register_jdtl_commercial() {
+  register_post_type( 'jdtl_commercial',
     array('labels' => array(
-      'name' => __('Commercial Videos', 'post type general name'), /* The Title of the Group */
+      'name' => __('Commercial Video', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
       'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
       'add_new_item' => __('Add New Video'), /* Add New Display Title */
@@ -157,19 +156,19 @@ function register_jdtla_commercial() {
   ); /* end of register post type */
 }
 
-add_action('init', 'register_jdtla_narrative');
-function register_jdtla_narrative() {
-  register_post_type( 'jdtla_narrative',
+add_action('init', 'register_jdtl_videoart');
+function register_jdtl_videoart() {
+  register_post_type( 'jdtl_videoart',
     array('labels' => array(
-      'name' => __('Narrative Videos', 'post type general name'), /* The Title of the Group */
+      'name' => __('Video Art', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
       'add_new' => __('Add New', 'custom post type item'), /* The add new menu item */
-      'add_new_item' => __('Add New Video'), /* Add New Display Title */
+      'add_new_item' => __('Add New Video Art'), /* Add New Display Title */
       'edit' => __( 'Edit' ), /* Edit Dialog */
-      'edit_item' => __('Edit Video'), /* Edit Display Title */
-      'new_item' => __('New Narrative Video'), /* New Display Title */
-      'view_item' => __('View Narrative Videos'), /* View Display Title */
-      'search_items' => __('Search Narrative Videos'), /* Search Custom Type Title */
+      'edit_item' => __('Edit Video Art'), /* Edit Display Title */
+      'new_item' => __('New Video Art'), /* New Display Title */
+      'view_item' => __('View Video Art'), /* View Display Title */
+      'search_items' => __('Search Video Art'), /* Search Custom Type Title */
       'not_found' =>  __('Nothing found in the Database.'), /* This displays if there are no entries yet */
       'not_found_in_trash' => __('Nothing found in Trash'), /* This displays if there is nothing in the trash */
       'parent_item_colon' => ''
@@ -180,7 +179,7 @@ function register_jdtla_narrative() {
       'exclude_from_search' => false,
       'show_ui' => true,
       'query_var' => true,
-      'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
+      'menu_position' => 7, /* this is what order you want it to appear in on the left hand side menu */
       'rewrite' => true,
       'capability_type' => 'post',
       'hierarchical' => false,
@@ -189,7 +188,6 @@ function register_jdtla_narrative() {
     ) /* end of options */
   ); /* end of register post type */
 }
-
 
 
 /* -------------------------------------------------------

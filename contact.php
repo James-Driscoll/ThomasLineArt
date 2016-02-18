@@ -13,10 +13,12 @@
 
  if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    	<h2><?php echo the_title(); ?></h2>
-     <p><?php echo the_content(); ?></p>
+<h2><?php echo the_title(); ?></h2>
+ <p><?php echo the_content(); ?></p>
+
+<script type="text/javascript" src="form-scripts.js"></script>
+<script type="text/javascript" src="validator.min.js"></script>
 
   <?php endwhile;
 
   get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
-  

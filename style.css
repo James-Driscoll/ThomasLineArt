@@ -13,7 +13,7 @@ Tags:
    ==============================================
 *  Black: #000;
 *  White: #FFF;
-*  Grey:  #;
+*  Grey:  #C7C3C3;
    ==============================================
 
 html,
@@ -329,7 +329,13 @@ body {
     font-weight: normal;
     font-family: 'Lato', 'Helvetica', 'Arial';
 }
-
+.wpcf7 .btn-primary {
+    background-color: #000;
+    border-color: #000;
+}
+.wpcf7 .btn-primary:hover {
+    opacity: 0.7;
+}
 
 /* -- Video Page Items ------------------------------------------------------ */
 .video-page {

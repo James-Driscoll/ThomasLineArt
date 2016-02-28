@@ -6,7 +6,7 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
-		<title><?php wp_title( 'Thomas Line Art |' ); ?></title>
+		<title><?php wp_title( 'Thomas Line |' ); ?></title>
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

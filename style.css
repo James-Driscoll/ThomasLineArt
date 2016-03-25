@@ -142,6 +142,7 @@ body {
     width: 80%;
     padding-right: 15%;
     margin-top: 100px;
+    min-height: 600px;
 }
 @media screen and (max-width: 1200px) {
     #vim_vid {
@@ -166,7 +167,7 @@ body {
         float: left;
         clear: both;
         margin: 0;
-        margin-bottom: 100px;
+        margin-bottom: 30px;
     }
     .menuWrapper {
         height: 100%;
@@ -187,14 +188,13 @@ body {
         text-align: center;
     }
     div.footer {
-        height: 234px;
-        margin-top: -234px;
+        margin-top: 50px;
     }
     div.footer ul li {
         display: block;
         text-align: center;
         line-height: normal;
-        padding: 30px 0px 30px 0px;
+        padding: 10px 0px 10px 0px;
         width: 100%;
     }
     #vim_vid {
@@ -431,26 +431,27 @@ a.item:hover {
 
 /* --Footer Items------------------------------------------------------------ */
 .footer {
-    clear: both;
+    /*clear: both;
     position: relative;
     z-index: 10;
     background: #000;
-    height: 100px;
-    margin-top: -100px;
+    height: 100px;*/
+    margin-top: 100px;
+    margin-bottom: 30px;
     font-family: 'Lato', 'Helvetica', 'Arial';
-    color: #C7C3C3;
+    color: #000;
     font-size: 15px;
     font-weight: normal;
-    line-height: 100px;
 }
 .footer .container-full {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
 }
 .footer a {
     text-decoration: none;
-    color: #C7C3C3;
+    color: #000;
     padding: 0;
 }
 .footer a:hover {

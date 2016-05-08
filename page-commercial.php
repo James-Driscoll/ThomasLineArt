@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Template Name: Narrative
+ * Template Name: Commercial
  *
  * @package WordPress
  * @subpackage ThomasLineArt
@@ -12,8 +12,8 @@ get_template_parts( array( 'parts/html-header') ); ?>
 
 <div class="centre all container">
 	<div class="">
-		<div class="narrative-page">
-			<?php $query = new WP_Query( array('post_type' => 'jdtla_narrative', 'posts_per_page' => 1000 ) );
+		<div class="commercial-page">
+			<?php $query = new WP_Query( array('post_type' => 'commercial', 'posts_per_page' => 1000 ) );
 			while ( $query->have_posts() ) : $query->the_post(); ?>
 				<div class="video">
 					<iframe class="feature" src="<?php the_field('vimeo_video_embed'); ?>" width="100%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

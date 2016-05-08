@@ -62,21 +62,6 @@ function buffer_end() { ob_end_flush(); }
 add_action('wp', 'buffer_start');
 add_action('wp_footer', 'buffer_end');
 
-/* -------------------------------------------------------
-  Post Thumbnails
-------------------------------------------------------- */
-add_theme_support( 'post-thumbnails' );
-
-if (class_exists('MultiPostThumbnails')) {
-    new MultiPostThumbnails(
-        array(
-            'label' => 'Secondary Image',
-            'id' => 'secondary-image',
-            'post_type' => 'jdtl_video'
-
-        )
-    );
-}
 
 /* --------------------------------------------------
  * Register Custom Menu
@@ -90,9 +75,9 @@ register_nav_menus(
 /* -------------------------------------------------------
     Custom Post Types
 ------------------------------------------------------- */
-add_action('init', 'register_jdtl_narrative');
-function register_jdtl_narrative() {
-  register_post_type( 'jdtl_narrative',
+add_action('init', 'register_narrative');
+function register_narrative() {
+  register_post_type( 'narrative',
     array('labels' => array(
       'name' => __('Narrative Video', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
@@ -123,9 +108,9 @@ function register_jdtl_narrative() {
   ); /* end of register post type */
 }
 
-add_action('init', 'register_jdtl_commercial');
-function register_jdtl_commercial() {
-  register_post_type( 'jdtl_commercial',
+add_action('init', 'register_commercial');
+function register_commercial() {
+  register_post_type( 'commercial',
     array('labels' => array(
       'name' => __('Commercial Video', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */
@@ -156,9 +141,9 @@ function register_jdtl_commercial() {
   ); /* end of register post type */
 }
 
-add_action('init', 'register_jdtl_videoart');
-function register_jdtl_videoart() {
-  register_post_type( 'jdtl_videoart',
+add_action('init', 'register_videoart');
+function register_videoart() {
+  register_post_type( 'videoart',
     array('labels' => array(
       'name' => __('Video Art', 'post type general name'), /* The Title of the Group */
       'singular_name' => __('Custom Post', 'post type singular name'), /* The individual type */

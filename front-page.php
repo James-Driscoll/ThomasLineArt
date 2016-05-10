@@ -12,7 +12,7 @@
 
 <body <?php body_class(); ?> id="body-background">
 
-<?php get_template_parts( array( 'parts/html-header') ); ?>
+<?php get_template_parts( array( 'header') ); ?>
 
 <div class="embed-responsive embed-responsive-16by9">
     <a href="https://vimeo.com/thomasline" target="_blank">
@@ -20,4 +20,4 @@
     </a>
 </div>
 
-<?php get_template_parts( array( 'parts/html-footer') ); ?>
+<?php get_template_parts( array( 'footer') ); ?>

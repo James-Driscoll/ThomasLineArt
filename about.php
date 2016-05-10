@@ -9,13 +9,16 @@
  * Please see /external/starkers-utilities.php for info on get_template_parts()
  */
 
- get_template_parts( array( 'parts/html-header') );
+ get_template_parts( array( 'header') );
 
- if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+ if ( have_posts() ) while ( have_posts() ) : the_post();
+
+//    $title =
+//    $image = ?>
 
 	<h2><?php echo the_title(); ?></h2>
      <p><?php echo the_content(); ?></p>
 
   <?php endwhile;
 
-  get_template_parts( array( 'parts/footer','parts/html-footer' ) ); ?>
+  get_template_parts( array( 'footer' ) ); ?>

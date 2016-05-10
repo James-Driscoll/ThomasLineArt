@@ -123,12 +123,19 @@ body {
     margin: 0;
     padding: 0;
 }
+.fixed {
+    position: fixed;
+}
+.scroll {
+    float: right;
+}
 
 /* -- Container Items-------------------------------------------------------- */
-.container {
-    max-width: 1200px;
+.mycontainer {
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 120px;
 }
 .menuWrapper {
     float: left;
@@ -285,22 +292,22 @@ body {
 }
 
 /* -- Social ------------------------*/
-.menuWrapper .social {
+.social {
     padding: 0;
     list-style: none;
     height: 200px;
     line-height: 200px;
 }
-.menuWrapper .social ul {
+.social ul {
     padding: 0;
     margin: 0;
 }
-.menuWrapper .social li {
+.social li {
     display: block;
     margin: 0px 0px 0px 5px;
     display:inline-block;
 }
-.menuWrapper .social li a i {
+.social li a i {
     font-size: 26px;
     color: #000;
     -moz-transition: all.3s;
@@ -309,7 +316,7 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.menuWrapper .social li a i:hover {
+.social li a i:hover {
     color: #C7C3C3;
     -moz-transition: all.3s;
     -o-transition: all.3s;
@@ -317,7 +324,7 @@ body {
     -webkit-transition: all.3s;
     transition: all.3s;
 }
-.menuWrapper .social li a .fa-facebook {
+.social li a .fa-facebook {
     font-size: 24px;
 }
 

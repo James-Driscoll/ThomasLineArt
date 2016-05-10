@@ -1,7 +1,7 @@
 
 
         <!-- Footer begins here -->
-        <div class="footer">
+        <div class="col-md-12 footer">
             <ul>
                 <!--<li class="email text-left"><a href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a></li>-->
                 <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
@@ -10,7 +10,11 @@
             </ul>
         </div>
         <!-- Footer ends here -->
-    </div> <!-- Close .contentWrapper -->
+    </div>
+</div>
+</div>
+</div>
+</div>
         </div> <!-- Close .pageWrapper -->
         <!-- BxSlider -->
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>

@@ -310,12 +310,6 @@ body {
 
 
 /* -- Page Items ------------------------------------------------------------ */
-.content .description {
-    font-size: 14px;
-    color: #000;
-    font-weight: normal;
-    font-family: 'Lato', 'Helvetica', 'Arial';
-}
 .wpcf7 .btn-primary {
     background-color: #000;
     border-color: #000;
@@ -414,6 +408,15 @@ a.item:hover {
     color: #000;
     font-size: 18px;
     font-weight: normal;
+}
+
+/* -- About Page Items------------------------*/
+img.portrait {
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 40px auto;
 }
 
 /* --Footer Items------------------------------------------------------------ */

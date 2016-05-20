@@ -14,11 +14,19 @@ get_template_parts( array( 'header') );
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
     $page_heading = get_field('page_heading');
-    $page_content = get_field('page_content'); ?>
+    $page_content = get_field('page_content');
+    $image_url = get_field('image'); ?>
 
-	<h2><?php echo $page_heading; ?></h2>
-    <div><?php echo $page_content; ?></div>
-
+    <div class="row">
+        <h2 class="text-center"><?php echo $page_heading; ?></h2>
+    </div>
+    <div class="row">
+        <img src="<?php echo $image_url; ?>" class="portrait text-center"/>
+    </div>
+    <div class="row">
+        <div><?php echo $page_content; ?></div>
+    </div>
+    
 <?php endwhile;
 
 get_template_parts( array( 'footer' ) ); ?>

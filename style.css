@@ -119,9 +119,7 @@ body {
     padding: 0;
 }
 .pageWrapper {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: 120px;
 }
 .fixed {
     position: fixed;
@@ -131,26 +129,6 @@ body {
 }
 
 /* -- Container Items-------------------------------------------------------- */
-.mycontainer {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-}
-.menuWrapper {
-    float: left;
-    position: fixed;
-    width: 20%;
-    padding-left: 4%;
-    margin-top: 100px;
-}
-.contentWrapper {
-    float: right;
-    width: 80%;
-    padding-right: 15%;
-    margin-top: 100px;
-    min-height: 600px;
-}
 @media screen and (max-width: 1200px) {
     #vim_vid {
         height: 480px;
@@ -235,9 +213,7 @@ body {
 
 /* -- Navigation --------------------*/
  .navWrapper {
-    clear: both;
     margin-top: 30px;
-    margin-left: 0;
 }
  .navWrapper ul {
     padding-left: 0px;

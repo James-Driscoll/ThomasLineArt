@@ -19,13 +19,13 @@
         <!-- Icon  -->
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 
-		<!-- Font Awesome Icons -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        <!-- Custom Style -->
+        <!-- Custom CSS -->
         <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css?v=3" rel="stylesheet">
 
 		<!-- DNS Prefetch -->
@@ -44,32 +44,35 @@
 
     <body <?php body_class(); ?>>
 
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-		<div class="mycontainer">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row">
-						<div class="col-md-2 fixed">
-							<div class="logo">
-								<a href="<?php echo get_site_url(); ?>">
-							  		<img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Thomas Line Art">
-								</a>
-							</div>
+	<div class="row">
+		<div class="container pageWrapper">
 
-							<div class="navWrapper">
-							  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
-							</div>
+		<!-- Left Side -->
+		<div class="col-md-2 fixed">
+			<div class="logo">
+				<a href="<?php echo get_site_url(); ?>">
+			  		<img height="" width="140" src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" alt="Thomas Line Art">
+				</a>
+			</div>
 
-							<div class="social">
-								<ul>
-									<li><a href="https://instagram.com/tomline92/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-									<li><a href="https://twitter.com/TomLine3" target="_blank"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="https://vimeo.com/thomasline" target="_blank"><i class="fa fa-vimeo"></i></a></li>
-									<li><a href="https://www.facebook.com/ThomasLineFilmmaker" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								</ul>
-							</div>
-					    </div>
-						<div class="col-md-10 scroll">
+			<div class="navWrapper">
+			  <?php wp_nav_menu (array('theme_location' => 'page_navigation','container_class' => 'nav')); ?>
+			</div>
+
+			<div class="social">
+				<ul>
+					<li><a href="https://instagram.com/tomline92/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://twitter.com/TomLine3" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://vimeo.com/thomasline" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+					<li><a href="https://www.facebook.com/ThomasLineFilmmaker" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</div>
+	    </div>
+		<!-- / Left Side -->
+
+		<!-- Right Side -->
+		<div class="col-md-10 scroll">

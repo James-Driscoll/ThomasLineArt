@@ -12,10 +12,9 @@
 
 <?php get_template_parts( array( 'header') );
 
-$vimeo_embed = get_field('vimeo_video_embed', false, false); ?>
+$vimeo_video_embed = get_field('vimeo_video_embed');
+$vimeo_link = get_field('vimeo_link') ?>
 
-<a href="https://vimeo.com/thomasline" target="_blank">
-    <iframe class="feature" src="<?php echo $vimeo_embed; ?>" width="100%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</a>
+<iframe class="feature" src="<?php echo $vimeo_video_embed; ?>" width="100%" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <?php get_template_parts( array( 'footer') ); ?>

@@ -127,6 +127,10 @@ body {
 .scroll {
     float: right;
 }
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
 /* -- Container Items-------------------------------------------------------- */
 @media screen and (max-width: 1200px) {

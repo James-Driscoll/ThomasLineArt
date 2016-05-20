@@ -11,11 +11,14 @@
 
  get_template_parts( array( 'header') );
 
- if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+ if ( have_posts() ) while ( have_posts() ) : the_post();
 
-    	<h2><?php echo the_title(); ?></h2>
-     <p><?php echo the_content(); ?></p>
+     $page_heading = get_field('page_heading');
+     $page_content = get_field('page_content'); ?>
 
-  <?php endwhile;
+ 	<h2><?php echo $page_heading; ?></h2>
+     <div><?php echo $page_content; ?></div>
 
-  get_template_parts( array( 'footer' ) ); ?>
+ <?php endwhile;
+
+ get_template_parts( array( 'footer' ) ); ?>

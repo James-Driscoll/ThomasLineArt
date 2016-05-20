@@ -1,21 +1,17 @@
-
-
-        <!-- Footer begins here -->
-        <div class="col-md-12 footer">
-            <ul>
-                <!--<li class="email text-left"><a href="mailto:info@thomasline.uk" target="_blank">info@thomasline.uk</a></li>-->
-                <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
-                <li class="text-center"><a href="http://mattlee.graphics/" target="_blank">Logo design by Matt Lee</a></li>
-                <li class="copy text-right"><span>copyright &copy; Thomas Line 2016</span></li>
-            </ul>
+                <!-- Footer -->
+                <div class="row">
+                    <div class="col-md-12 footer">
+                        <ul>
+                            <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
+                            <li class="text-center"><a href="http://mattlee.graphics/" target="_blank">Logo design by Matt Lee</a></li>
+                            <li class="copy text-right"><span>copyright &copy; Thomas Line 2016</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Footer -->
+            </div>
         </div>
-        <!-- Footer ends here -->
-    </div>
-</div>
-</div>
-</div>
-</div>
-        </div> <!-- Close .pageWrapper -->
+
         <!-- BxSlider -->
         <script src="<?php echo get_stylesheet_directory_uri();?>/js/jquery.bxSlider.min.js"></script>
 
@@ -48,5 +44,4 @@
         <?php wp_footer(); ?>
 
 </body>
-
 </html>

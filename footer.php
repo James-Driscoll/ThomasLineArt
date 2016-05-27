@@ -1,10 +1,10 @@
                 <!-- Footer -->
                 <div class="row">
-                    <div class="col-md-12 footer">
+                    <div id="footer" class="col-md-12 footer">
                         <ul>
                             <li class="developer text-center"><a href="http://jamesdriscoll.london" target="_blank">Developed by James Driscoll</a></li>
                             <li class="text-center"><a href="http://mattlee.graphics/" target="_blank">Logo design by Matt Lee</a></li>
-                            <li class="copy text-right"><span>copyright &copy; Thomas Line 2016</span></li>
+                            <li class="copy text-right"><span>Copyright &copy; Thomas Line 2016</span></li>
                         </ul>
                     </div>
                 </div>

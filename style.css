@@ -121,15 +121,27 @@ body {
 .pageWrapper {
     margin-top: 120px;
 }
-.fixed {
-    position: fixed;
-}
 .scroll {
     float: right;
 }
-.row {
-    margin-right: 0px;
-    margin-left: 0px;
+@media screen and (min-width: 991px) {
+    .fixed {
+        position: fixed;
+    }
+}
+@media screen and (max-width: 991px) {
+    div.scroll {
+        float: none;
+    }
+    .fixed {
+        text-align: center;
+    }
+    .pageWrapper {
+        margin-top: 40px;
+    }
+    #footer {
+        margin-top: 0px;
+    }
 }
 
 /* -- Container Items-------------------------------------------------------- */
